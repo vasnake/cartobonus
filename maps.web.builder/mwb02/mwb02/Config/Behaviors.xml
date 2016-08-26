@@ -1,0 +1,15 @@
+﻿<Behaviors xmlns:esri="http://schemas.esri.com/arcgis/mapping/2009" 
+xmlns:mwb02="clr-namespace:mwb02.AddIns;assembly=mwb02.AddIns">
+  <Behavior IsEnabled="True" Title="My sample behavior">
+    <Behavior.Class>
+      <mwb02:MyBehavior />
+    </Behavior.Class>
+    <Behavior.ConfigData>Sample behavior configuration</Behavior.ConfigData>
+  </Behavior>
+  <Behavior IsEnabled="True" Title="Identify">
+    <Behavior.Class>
+      <esri:IdentifyBehavior />
+    </Behavior.Class>
+    <Behavior.ConfigData></Behavior.ConfigData>
+  </Behavior>
+</Behaviors>

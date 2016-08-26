@@ -1,0 +1,26 @@
+﻿<esri:Map
+	 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	 xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+	 xmlns:esriBing="clr-namespace:ESRI.ArcGIS.Client.Bing;assembly=ESRI.ArcGIS.Client.Bing"
+	 xmlns:esriMapping="http://schemas.esri.com/arcgis/mapping/2009"
+	 xmlns:esriExtensibility="http://schemas.esri.com/arcgis/client/extensibility/2010"
+	 xmlns:esriFSSymbols="clr-namespace:ESRI.ArcGIS.Client.FeatureService.Symbols;assembly=ESRI.ArcGIS.Client" SnapToLevels="True"
+	 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<esriMapping:ScaleBarExtensions.ScaleBarMapUnit>Meters</esriMapping:ScaleBarExtensions.ScaleBarMapUnit>
+	<esri:Map.IsLogoVisible>False</esri:Map.IsLogoVisible>
+	<esri:Map.Extent>
+		<esri:Envelope XMin="-3405423.73610192" XMax="20819610.764256" YMin="778231.102620577" YMax="15356301.1371655">
+			<esri:Envelope.SpatialReference>
+				<esri:SpatialReference WKID="102100" />
+			</esri:Envelope.SpatialReference>
+		</esri:Envelope>
+	</esri:Map.Extent>
+	<esri:ArcGISTiledMapServiceLayer ID="Topographic" Url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" MinimumResolution="0">
+		<esriExtensibility:Document.IsBaseMap>true</esriExtensibility:Document.IsBaseMap>
+		<esriMapping:LayerExtensions.LayerName>Streets</esriMapping:LayerExtensions.LayerName>
+		<esriMapping:LayerExtensions.LayerInfos />
+		<esriExtensibility:LayerProperties.IsPopupEnabled>true</esriExtensibility:LayerProperties.IsPopupEnabled>
+		<esriExtensibility:LayerProperties.IsVisibleInMapContents>true</esriExtensibility:LayerProperties.IsVisibleInMapContents>
+	</esri:ArcGISTiledMapServiceLayer>
+</esri:Map>

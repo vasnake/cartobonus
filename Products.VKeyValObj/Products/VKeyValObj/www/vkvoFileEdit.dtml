@@ -1,0 +1,35 @@
+<!--
+# -*- mode: html; coding: utf-8 -*-
+# (c) Valik mailto:vasnake@gmail.com
+-->
+<dtml-var manage_page_header>
+<dtml-var manage_tabs>
+
+<p class="form-help">
+	You can update the data for this object using the form below.
+</p>
+<form action="editFunction">
+<table cellspacing="0" cellpadding="2" border="0">
+  <tr>
+    <td align="left" valign="top">
+		<div class="form-optional">Value</div>
+    </td>
+    <td align="left" valign="top">
+		<input type="text" name="text" size="40"
+			value="&dtml-text;"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"> </td>
+    <td align="left" valign="top">
+		<div class="form-element">
+			<input class="form-element" type="submit" name="submit" value=" Save Changes " />
+		</div>
+    </td>
+  </tr>
+</table>
+<p class="form-help">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta augue id sem laoreet rhoncus. Mauris volutpat, eros tristique luctus viverra, enim nulla dictum sapien, nec feugiat nibh diam ac est. Duis adipiscing porttitor est vel eleifend. Suspendisse interdum ante vel risus imperdiet sed mattis quam blandit. Cras et ipsum neque. Praesent sollicitudin nulla sit amet tortor bibendum in interdum augue ultrices. Aliquam ultrices sodales sapien, eu suscipit dolor luctus vitae. Nulla a risus leo, elementum laoreet nunc. Praesent purus est, mollis id blandit quis, accumsan non dolor. Donec accumsan luctus porttitor.
+</p>
+</form>
+<dtml-var manage_page_footer>

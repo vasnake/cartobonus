@@ -1,0 +1,29 @@
+{% extends "common.layout.html" %}
+
+{% block sidemenu %}
+	<li><a href="/cartobonus/">Картобонус</a></li>
+	<li><a href="/cartobonus/help/">Справка</a></li>
+	<li class="active"><a href="/cartobonus.servlets/cabinet">Кабинет</a></li>
+{% endblock %}
+
+
+{% block mainblockspan9 %}
+	<h2>Персональные данные и настройки</h2>
+	<p>Информация о пользователе</p>
+	<dl>
+		<dt> Ф.И.О: <!-- Сидоров Иван Петрович --> </dt>
+			<dd> {{ current_user.fullname }} </dd>
+		<dt> Логин: <!-- i.sidorov --> </dt>
+			<dd> {{ current_user.name }} </dd>
+		<dt> Идентификатор: <!-- 1234567890 --> </dt>
+			<dd> {{ current_user.id }} </dd>
+		<dt> Нагрузка на сервер за последнюю сессию: <!-- 9876543210 2012-11-21 20:26 --> </dt>
+			<dd> {{ session.get('hits', 1) }} запросов с момента {{ session.get('sessionCreated', '2012-12-12') }} </dd>
+	</dl>
+
+	<h4>Реестр слоев</h4>
+	<p> Персональный список служб и слоев в формате XML:
+		<a href="{{ url_for('mapservicesPage') }}">mapservices.list.xml</a> <br/>
+		<a class="btn btn-primary" href="{{ url_for('edittellyPage') }}">редактировать</a>
+	</p>
+{% endblock %}

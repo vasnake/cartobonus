@@ -1,0 +1,11 @@
+# -*- mode: text; coding: utf-8 -*-
+# (c) Valik mailto:vasnake@gmail.com
+
+Depend on
+
+Zope
+	Acquisition
+	Globals
+	AccessControl
+	OFS
+	interface

@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToolPanels xmlns:esri="http://schemas.esri.com/arcgis/mapping/2009"
+xmlns:mwb02="clr-namespace:mwb02.AddIns;assembly=mwb02.AddIns">
+  <ToolPanel Name="Main Toolbar" ContainerName="MainToolbarContainer" Orientation="Horizontal">
+    <Tools>
+      <Tool Label="My Sample Tool" Icon="/ESRI.ArcGIS.Mapping.Controls;component/images/icon_tools16.png" Description="My Sample Tool">
+        <Tool.Class>
+          <mwb02:MyTool />
+        </Tool.Class>
+        <Tool.ConfigData>Hello World!</Tool.ConfigData>
+      </Tool>
+
+      <Tool Label="Choose Basemap"
+             Icon="Images/toolbar/BaseMapGallery16.png"
+             Description="Select a basemap for the map">
+        <Tool.Class>
+          <esri:BaseMapGallery />
+        </Tool.Class>
+        <Tool.ConfigData>
+          <BaseMaps>
+            <BaseMapInfo>
+              <DisplayName>Streets</DisplayName>
+              <Name>Streets</Name>
+              <ThumbnailImage>Images/basemaps/agol_streets.png</ThumbnailImage>
+              <Url>http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer</Url>
+              <BaseMapType>ArcGISServer</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>Topographic</DisplayName>
+              <Name>Topo</Name>
+              <ThumbnailImage>Images/basemaps/agol_topo.png</ThumbnailImage>
+              <Url>http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer</Url>
+              <BaseMapType>ArcGISServer</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>Imagery</DisplayName>
+              <Name>Imagery</Name>
+              <ThumbnailImage>Images/basemaps/agol_imagery.png</ThumbnailImage>
+              <Url>http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer</Url>
+              <BaseMapType>ArcGISServer</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>USA Topo Maps</DisplayName>
+              <Name>USA Topo Maps</Name>
+              <ThumbnailImage>Images/basemaps/agol_usa.png</ThumbnailImage>
+              <Url>http://services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer</Url>
+              <BaseMapType>ArcGISServer</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>Ocean</DisplayName>
+              <Name>Ocean</Name>
+              <ThumbnailImage>Images/basemaps/agol_ocean.png</ThumbnailImage>
+              <Url>http://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer</Url>
+              <BaseMapType>ArcGISServer</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>Light Gray Canvas</DisplayName>
+              <Name>Light Gray Canvas</Name>
+              <ThumbnailImage>Images/basemaps/agol_gray_canvas.png</ThumbnailImage>
+              <Url>http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer</Url>
+              <BaseMapType>ArcGISServer</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>Terrain</DisplayName>
+              <Name>Terrain</Name>
+              <ThumbnailImage>Images/basemaps/agol_terrain.png</ThumbnailImage>
+              <Url>http://services.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer</Url>
+              <BaseMapType>ArcGISServer</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>Shaded Relief</DisplayName>
+              <Name>Shaded Relief</Name>
+              <ThumbnailImage>Images/basemaps/agol_world_relief.png</ThumbnailImage>
+              <Url>http://services.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer</Url>
+              <BaseMapType>ArcGISServer</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>OpenStreetMap</DisplayName>
+              <Name>OpenStreetMap</Name>
+              <ThumbnailImage>Images/basemaps/osm.png</ThumbnailImage>
+              <Url>http://OpenStreetMap.org</Url>
+              <BaseMapType>OpenStreetMap</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>Bing Maps Roads</DisplayName>
+              <Name>Roads</Name>
+              <ThumbnailImage>Images/basemaps/bingmaps_roads.png</ThumbnailImage>
+              <Url>http://dev.virtualearth.net/webservices/v1/imageryservice/imageryservice.svc</Url>
+              <BaseMapType>BingMaps</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>Bing Maps Aerial</DisplayName>
+              <Name>Aerial</Name>
+              <ThumbnailImage>Images/basemaps/bingmaps_aerial.png</ThumbnailImage>
+              <Url>http://dev.virtualearth.net/webservices/v1/imageryservice/imageryservice.svc</Url>
+              <BaseMapType>BingMaps</BaseMapType>
+            </BaseMapInfo>
+            <BaseMapInfo>
+              <DisplayName>Bing Maps Hybrid</DisplayName>
+              <Name>Hybrid</Name>
+              <ThumbnailImage>Images/basemaps/bingmaps_hybrid.png</ThumbnailImage>
+              <Url>http://dev.virtualearth.net/webservices/v1/imageryservice/imageryservice.svc</Url>
+              <BaseMapType>BingMaps</BaseMapType>
+            </BaseMapInfo>
+          </BaseMaps>
+        </Tool.ConfigData>
+      </Tool>
+
+      <Tool Label="Map Contents"
+              Icon="Images/toolbar/ToggleMapContentsCommand16.png"
+              Description="Toggle map contents">
+        <Tool.Class>
+          <esri:ToggleMapContentsCommand />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Attribute Table"
+          Icon="Images/toolbar/ToggleTableCommand16.png"
+          Description="Toggle the visibility of the attributes table">
+        <Tool.Class>
+          <esri:ToggleTableCommand />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Search"
+          Icon="Images/toolbar/ToggleSearchCommand16.png"
+          Description="Search for places or layers">
+        <Tool.Class>
+          <esri:ToggleSearchCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Select"
+          Icon="Images/toolbar/SelectByDrawCommand16.png"
+          Description="Select features by drawing a box on the map">
+        <Tool.Class>
+          <esri:SelectByDrawCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Clear Selection"
+          Icon="Images/toolbar/ClearSelectionCommand16.png"
+            Description="Clear the selected features from the currently selected layer">
+        <Tool.Class>
+          <esri:ClearSelectionCommand  />
+        </Tool.Class>
+      </Tool>
+
+    </Tools>
+  </ToolPanel>
+
+  <ToolPanel Name="Layer Configuration Toolbar" ContainerName="LayerConfigurationToolbarContainer" Orientation="Horizontal">
+    <Tools>
+
+      <Tool Label="Delete"
+              Icon="Images/toolbar/DeleteLayerCommand16.png"
+              Description="Deletes the currently selected layer">
+        <Tool.Class>
+          <esri:DeleteLayerCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Bring Forward"
+              Icon="Images/toolbar/MoveLayerDownCommand16.png"
+              Description="Brings the currently selected layer forward">
+        <Tool.Class>
+          <esri:MoveLayerDownCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Send Backward"
+              Icon="Images/toolbar/MoveLayerUpCommand16.png"
+              Description="Sends the currently selected layer backward">
+        <Tool.Class>
+          <esri:MoveLayerUpCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Refresh"
+              Icon="Images/toolbar/RefreshLayerCommand16.png"
+              Description="Refresh the currently selected layer">
+        <Tool.Class>
+          <esri:RefreshLayerCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Go To"
+              Icon="Images/toolbar/GoToLayerCommand16.png"
+              Description="Zoom to the currently selected layer">
+        <Tool.Class>
+          <esri:GoToLayerCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Service Details"
+              Icon="Images/toolbar/ServiceDetailsCommand16.png"
+              Description="View information about the selected layer's data source">
+        <Tool.Class>
+          <esri:ServiceDetailsCommand  />
+        </Tool.Class>
+      </Tool>
+
+    </Tools>
+  </ToolPanel>
+
+  <ToolPanel Name="Layer Configuration Context Menu" ContainerName="LayerConfigurationContextMenuContainer" Orientation="Vertical">
+    <Tools>
+
+      <Tool Label="Delete"
+              Icon="Images/toolbar/DeleteLayerCommand16.png"
+              Description="Deletes the currently selected layer">
+        <Tool.Class>
+          <esri:DeleteLayerCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Refresh"
+              Icon="Images/toolbar/RefreshLayerCommand16.png"
+              Description="Refresh the currently selected layer">
+        <Tool.Class>
+          <esri:RefreshLayerCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Go To"
+              Icon="Images/toolbar/GoToLayerCommand16.png"
+              Description="Zoom to the currently selected layer">
+        <Tool.Class>
+          <esri:GoToLayerCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Service Details"
+              Icon="Images/toolbar/ServiceDetailsCommand16.png"
+              Description="View information about the selected layer's data source">
+        <Tool.Class>
+          <esri:ServiceDetailsCommand  />
+        </Tool.Class>
+      </Tool>
+
+    </Tools>
+  </ToolPanel>
+
+  <ToolPanel Name="Attribute Table Toolbar" ContainerName="FeatureDataGridToolbarContainer"
+           Orientation="Horizontal">
+    <Tools>
+
+      <Tool Label="Select All"
+          Icon="Images/toolbar/SelectAllCommand16.png"
+            Description="Select all the features in the currently selected layer">
+        <Tool.Class>
+          <esri:SelectAllCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Zoom to Selection"
+          Icon="Images/toolbar/zoomToSelectionCommand16.png"
+          Description="Zoom to the currently selected features">
+        <Tool.Class>
+          <esri:ZoomToSelectionCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Export Selection"
+          Icon="Images/toolbar/ExportSelectionCommand16.png"
+          Description="Export the attributes of selected features to a CSV file">
+        <Tool.Class>
+          <esri:ExportSelectionCommand  />
+        </Tool.Class>
+      </Tool>
+
+      <Tool Label="Clear Selection"
+          Icon="Images/toolbar/ClearSelectionCommand16.png"
+            Description="Clear the selected features from the currently selected layer">
+        <Tool.Class>
+          <esri:ClearSelectionCommand  />
+        </Tool.Class>
+      </Tool>
+
+    </Tools>
+  </ToolPanel>
+</ToolPanels>

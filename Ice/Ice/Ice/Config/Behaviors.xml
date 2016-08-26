@@ -1,0 +1,15 @@
+﻿<Behaviors xmlns:esri="http://schemas.esri.com/arcgis/mapping/2009" 
+xmlns:Ice="clr-namespace:Ice.AddIns;assembly=Ice.AddIns">
+  <Behavior IsEnabled="True" Title="My sample behavior">
+    <Behavior.Class>
+      <Ice:MyBehavior />
+    </Behavior.Class>
+    <Behavior.ConfigData>Sample behavior configuration</Behavior.ConfigData>
+  </Behavior>
+  <Behavior IsEnabled="True" Title="Identify">
+    <Behavior.Class>
+      <esri:IdentifyBehavior />
+    </Behavior.Class>
+    <Behavior.ConfigData></Behavior.ConfigData>
+  </Behavior>
+</Behaviors>

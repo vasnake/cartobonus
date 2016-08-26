@@ -1,0 +1,26 @@
+{% extends "common.layout.html" %}
+
+{% block sidemenu %}
+	<li><a href="/cartobonus/">Картобонус</a></li>
+	<li><a href="/cartobonus/help/">Справка</a></li>
+	<li class="active"><a href="/cartobonus.servlets/cabinet">Кабинет</a></li>
+{% endblock %}
+
+
+{% block mainblockspan9 %}
+	<h2>Редактирование реестра слоев</h2>
+
+	<p>Содержимое персонального реестра (<a href="/cartobonus/mapservices.list.xml" target="maplistMain">образец</a>)</p>
+
+	<form enctype="multipart/form-data" method="post"
+		action="{{ url_for('savetellyPage') }}" name="tellyForm">
+		<textarea class="span12" wrap="off" cols="80" rows="24" name="telly">{{ xml }}</textarea><br />
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary">Сохранить</button>
+			<button type="button" class="btn" onclick="javascript:window.history.back()">Вернуться</button>
+		</div>
+<!--
+	<input class="btn btn-primary" tabindex="3" name="submit" value="Сохранить" type="submit" />
+-->
+	</form>
+{% endblock %}

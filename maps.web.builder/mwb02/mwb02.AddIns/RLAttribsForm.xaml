@@ -1,0 +1,265 @@
+﻿<UserControl x:Class="mwb02.AddIns.RLAttribsForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:mwb02.AddIns"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:ctrl="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+
+	 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	 xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+	 xmlns:esriMapping="http://schemas.esri.com/arcgis/mapping/2009"
+	 xmlns:esriExtensibility="http://schemas.esri.com/arcgis/client/extensibility/2010"
+	 xmlns:esriFSSymbols="clr-namespace:ESRI.ArcGIS.Client.FeatureService.Symbols;assembly=ESRI.ArcGIS.Client"
+     xmlns:esriToolkitPrimitives="clr-namespace:ESRI.ArcGIS.Client.Toolkit.Primitives;assembly=ESRI.ArcGIS.Client.Toolkit"
+
+    mc:Ignorable="d"
+    d:DesignHeight="318" d:DesignWidth="400">
+
+	<UserControl.Resources>
+		<ResourceDictionary >
+			<!-- points OriginX="0.1" OriginY="1" : 0, 0 будет верхний левый угол, 1, 1 будет правый нижний угол, 0.5, 0.5 будет середина картинки -->
+			<ctrl:ObjectCollection x:Key="listSymbols">
+<!--
+				Point markers
+-->
+				<esriMapping:ImageFillSymbol x:Name="YellowFlag" DisplayName="Флажок"
+                  Size="32" OriginX="0.1" OriginY="1"
+                  Source="Images/MarkerSymbols/Basic/YellowFlag.png">
+				</esriMapping:ImageFillSymbol>
+				<esriMapping:ImageFillSymbol x:Name="OrangeStickpin" DisplayName="Булавка"
+                  Size="32" OriginX="0.5" OriginY="1"
+                  Source="Images/MarkerSymbols/Basic/OrangeStickpin.png">
+				</esriMapping:ImageFillSymbol>
+				<esriMapping:ImageFillSymbol x:Name="Populated4" DisplayName="Треугольник"
+                  Size="32" OriginX="0.5" OriginY="0.5"
+                  Source="Images/MarkerSymbols/Basic/Populated4.png">
+				</esriMapping:ImageFillSymbol>
+				<esriMapping:ImageFillSymbol x:Name="Populated5" DisplayName="Квадрат"
+                  Size="32" OriginX="0.5" OriginY="0.5"
+                  Source="Images/MarkerSymbols/Basic/Populated5.png">
+				</esriMapping:ImageFillSymbol>
+				<esriMapping:ImageFillSymbol x:Name="Populated6" DisplayName="Круг"
+                  Size="32" OriginX="0.5" OriginY="0.5"
+                  Source="Images/MarkerSymbols/Basic/Populated6.png">
+				</esriMapping:ImageFillSymbol>
+				<esriMapping:ImageFillSymbol x:Name="Information" DisplayName="Информация"
+                  Size="32" OriginX="0.5" OriginY="0.5"
+                  Source="Images/MarkerSymbols/PeoplePlaces/Information.png">
+				</esriMapping:ImageFillSymbol>
+				<esriMapping:ImageFillSymbol x:Name="Question" DisplayName="Вопрос"
+                  Size="32" OriginX="0.5" OriginY="0.5"
+                  Source="Images/MarkerSymbols/PeoplePlaces/Question.png">
+				</esriMapping:ImageFillSymbol>
+			</ctrl:ObjectCollection>
+			<!-- 
+old unanimated markers
+пропавшее нашлось в c:\Inetpub\wwwroot\Apps\app4\Viewer.xap\ESRI.ArcGIS.Mapping.Core.dll
+				<ctrl:ObjectCollection x:Key="listSymbols">
+					<local:VTwoNames DisplayName="Флажок" keyName="YellowFlag" />
+				<local:VTwoNames DisplayName="Булавка" keyName="OrangeStickpin" />
+				<local:VTwoNames DisplayName="Вопрос" keyName="Question" />
+			</ctrl:ObjectCollection>
+			<esri:PictureMarkerSymbol x:Name="YellowFlag"
+                  Height="32" Width="32" OffsetX="0.1" OffsetY="1"
+                  Source="Images/MarkerSymbols/Basic/YellowFlag.png">
+			</esri:PictureMarkerSymbol>
+			<esri:PictureMarkerSymbol x:Name="OrangeStickpin"
+                  Height="32" Width="32" OffsetX="0.5" OffsetY="1"
+                  Source="Images/MarkerSymbols/Basic/OrangeStickpin.png">
+			</esri:PictureMarkerSymbol>
+			<esri:PictureMarkerSymbol x:Name="Question"
+                  Height="32" Width="32" OffsetX="0.5" OffsetY="0.5"
+                  Source="Images/MarkerSymbols/PeoplePlaces/Question.png">
+			</esri:PictureMarkerSymbol>
+-->
+
+			<!-- lines
+You should not be setting the template on the Simple* symbols. Instead use the base
+LineSymbol, FillSymbol and MarkerSymbol when defining custom templates.
+For samples, look at the Symbol Gallery. Some of the symbols has hover and selection states. 
+http://help.arcgis.com/en/webapi/silverlight/samples/SymbolGalleryWeb/start.htm
+			<esri:SimpleLineSymbol x:Key="drawLineSymbol" Color="Green" Width="3" />
+			<esri:SimpleLineSymbol x:Key="defaultLineSymbol" Color="Red" Width="2" />
+			-->
+			<esri:LineSymbol x:Key="drawLineSymbol" Color="Green" Width="3" />
+			<esri:LineSymbol x:Key="defaultLineSymbolSimple" Color="Red" Width="2" />
+
+			<esri:LineSymbol x:Key="defaultLineSymbol">
+				<esri:LineSymbol.ControlTemplate>
+					<ControlTemplate xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows">
+						<Grid>
+							<vsm:VisualStateManager.VisualStateGroups>
+								<vsm:VisualStateGroup x:Name="CommonStates">
+									<vsm:VisualState x:Name="MouseOver">
+										<Storyboard>
+											<ColorAnimation BeginTime="0" Storyboard.TargetName="Element" 
+																			 Storyboard.TargetProperty="(Line.Stroke).(SolidColorBrush.Color)" 
+																			To="#88F000FF" Duration="0:0:0.1" />
+											<DoubleAnimation BeginTime="0" Storyboard.TargetName="Element" 
+																			 Storyboard.TargetProperty="(Shape.StrokeThickness)" 
+																			 To="4" Duration="00:00:0.1" />
+										</Storyboard>
+									</vsm:VisualState>
+									<vsm:VisualState x:Name="Normal">
+										<Storyboard>
+											<ColorAnimation BeginTime="0" Storyboard.TargetName="Element" 
+																			 Storyboard.TargetProperty="(Line.Stroke).(SolidColorBrush.Color)" 
+																			To="#880000FF" Duration="0:0:0.1" />
+										</Storyboard>
+									</vsm:VisualState>
+									<vsm:VisualState x:Name="Selected">
+										<Storyboard>
+											<ColorAnimation BeginTime="0" Storyboard.TargetName="Element" 
+																			 Storyboard.TargetProperty="(Line.Stroke).(SolidColorBrush.Color)" 
+																			To="#88FFFF00" Duration="0:0:0.1" />
+											<DoubleAnimation BeginTime="0" Storyboard.TargetName="Element" 
+																			 Storyboard.TargetProperty="(Shape.StrokeThickness)" 
+																			 To="3" Duration="00:00:0.1" />
+										</Storyboard>
+									</vsm:VisualState>
+								</vsm:VisualStateGroup>
+							</vsm:VisualStateManager.VisualStateGroups>
+							<Path x:Name="Element" Stroke="Blue" StrokeThickness="2" />
+						</Grid>
+					</ControlTemplate>
+				</esri:LineSymbol.ControlTemplate>
+			</esri:LineSymbol>
+
+			<ctrl:ObjectCollection x:Key="listLineSymbols">
+				<local:VTwoNames DisplayName="Черновая линия" keyName="drawLineSymbol" />
+				<local:VTwoNames DisplayName="Полилиния" keyName="defaultLineSymbol" />
+				<local:VTwoNames DisplayName="Полилиния без анимации" keyName="defaultLineSymbolSimple" />
+			</ctrl:ObjectCollection>
+
+<!--
+Polygons
+https://www.google.ru/search?q=highlight+graphic+arcgis+silverlight
+http://forums.arcgis.com/threads/12478-highlight-geometry-on-mouse-over
+http://help.arcgis.com/en/webapi/silverlight/samples/start.htm#SpatialQuery
+			<esri:SimpleFillSymbol x:Name="drawAreaSymbol" Fill="#3300FF00" BorderBrush="Green" BorderThickness="2" />
+			<esri:SimpleFillSymbol x:Name="defaultAreaSymbol" Fill="#33FF0000" BorderBrush="Red" BorderThickness="2" />
+-->
+			<esri:FillSymbol x:Name="drawAreaSymbol" Fill="#3300FF00" BorderBrush="Green" BorderThickness="2" />
+			<esri:FillSymbol x:Name="defaultAreaSymbolSimple" Fill="#33FF0000" BorderBrush="Red" BorderThickness="2" />
+			
+			<esri:FillSymbol x:Name="defaultAreaSymbol">
+				<esri:FillSymbol.ControlTemplate>
+					<ControlTemplate x:Name="CustomPolygonTemplate">
+						<Grid>
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal">
+										<Storyboard>
+											<ColorAnimation Storyboard.TargetName="Element"
+                                                Storyboard.TargetProperty="(Fill).(Color)"
+                                                To="#880000FF" Duration="0:0:0.1" />
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="MouseOver">
+										<Storyboard>
+											<ColorAnimation Storyboard.TargetName="Element"
+                                                Storyboard.TargetProperty="(Fill).(Color)"
+                                                To="#88F000FF" Duration="0:0:0.1" />
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Selected">
+										<Storyboard>
+											<ColorAnimation Storyboard.TargetName="Element"
+                                                Storyboard.TargetProperty="(Fill).(Color)"
+                                                To="#8800FFFF" Duration="0:0:0.1" />
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Path x:Name="Element" Stroke="Blue" Fill="#880000FF"
+                                StrokeStartLineCap="Round" StrokeThickness="2" 
+                                StrokeLineJoin="Round" StrokeEndLineCap="Round" />
+						</Grid>
+					</ControlTemplate>
+				</esri:FillSymbol.ControlTemplate>
+			</esri:FillSymbol>
+			
+			<ctrl:ObjectCollection x:Key="listAreaSymbols">
+				<local:VTwoNames DisplayName="Черновой полигон" keyName="drawAreaSymbol" />
+				<local:VTwoNames DisplayName="Полигон" keyName="defaultAreaSymbol" />
+				<local:VTwoNames DisplayName="Полигон без анимации" keyName="defaultAreaSymbolSimple" />
+			</ctrl:ObjectCollection>
+
+<!-- 
+Text markers
+you can use word 'текст' only in TextSymbol's DisplayName.
+DisplayName is a markType 
+-->
+			<esri:TextSymbol x:Name="defaultTextSymbol" Text="Txt" FontFamily="Arial"
+              FontSize="16" Foreground="Black" OffsetX="0" OffsetY="0"></esri:TextSymbol>
+			<esri:TextSymbol x:Name="greenTextSymbol" Text="Txt" FontFamily="Arial"
+              FontSize="18" Foreground="Green" OffsetX="0" OffsetY="0"></esri:TextSymbol>
+			<esri:TextSymbol x:Name="redTextSymbol" Text="Txt" FontFamily="Courier New"
+              FontSize="20" Foreground="Red" OffsetX="0" OffsetY="0"></esri:TextSymbol>
+			<esri:TextSymbol x:Name="yellowTextSymbol" Text="Txt" FontFamily="Times New Roman"
+              FontSize="20" Foreground="Yellow" OffsetX="0" OffsetY="0"></esri:TextSymbol>
+			<esri:TextSymbol x:Name="smallTextSymbol" Text="Txt" FontFamily="Times New Roman"
+              FontSize="14" Foreground="Black" OffsetX="0" OffsetY="0"></esri:TextSymbol>
+			<esri:TextSymbol x:Name="bigTextSymbol" Text="Txt" FontFamily="Verdana"
+              FontSize="28" Foreground="Black" OffsetX="0" OffsetY="0"></esri:TextSymbol>
+			<ctrl:ObjectCollection x:Key="listTextSymbols">
+				<local:VTwoNames DisplayName="Текст" keyName="defaultTextSymbol" />
+				<local:VTwoNames DisplayName="Зеленый текст" keyName="greenTextSymbol" />
+				<local:VTwoNames DisplayName="Желтый текст" keyName="yellowTextSymbol" />
+				<local:VTwoNames DisplayName="Красный текст" keyName="redTextSymbol" />
+				<local:VTwoNames DisplayName="Малый текст" keyName="smallTextSymbol" />
+				<local:VTwoNames DisplayName="Крупный текст" keyName="bigTextSymbol" />
+			</ctrl:ObjectCollection>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="White"
+  Height="324" Width="400">
+
+		<sdk:Label Height="31" HorizontalAlignment="Left" Margin="12,12,0,0"
+      Name="label1" VerticalAlignment="Top" Width="344"
+      FontSize="16"
+      Content="Задайте вид, название и описание:" />
+
+		<ComboBox Height="34" HorizontalAlignment="Left" Margin="12,49,0,0"
+                  Name="cbType" VerticalAlignment="Top" Width="366"
+                  ItemsSource="{Binding}" SelectionChanged="onSelectSymbol">
+			<ComboBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<esriToolkitPrimitives:SymbolDisplay Symbol="{Binding Path=symbol}"
+                          Width="32" Height="32"
+                          VerticalAlignment="Center" />
+						<TextBlock Text="{Binding Path=DisplayName}"
+                      FontSize="15"
+                      VerticalAlignment="Center"
+                      Margin="5,0,0,0" />
+					</StackPanel>
+				</DataTemplate>
+			</ComboBox.ItemTemplate>
+		</ComboBox>
+
+		<Grid x:Name="gridTextAttr">
+			<TextBox Name="tbID" Visibility="Collapsed"
+             Text="oops"/>
+			<TextBox Height="34" HorizontalAlignment="Left" Margin="12,111,0,0"
+             Name="tbName" VerticalAlignment="Top" Width="366" FontSize="15"
+             Text="oops" TextChanged="onNameChanged" />
+			<TextBox Height="81" Width="366" MinWidth="366" MinHeight="81"
+          HorizontalAlignment="Left" Margin="12,173,0,0"
+          Name="tbDescr" VerticalAlignment="Top"  FontSize="15"
+          Text="oops" TextWrapping="Wrap" TextChanged="onDescrChanged"
+          AcceptsReturn="True" VerticalScrollBarVisibility="Auto" />
+		</Grid>
+
+		<Button Content="Сохранить" Height="30" HorizontalAlignment="Left"
+            Click="saveButton_Click"
+            Margin="12,273,0,0" Name="button1" VerticalAlignment="Top" FontSize="15"
+            Width="119" />
+		<Button Content="Удалить" Height="30" HorizontalAlignment="Left" FontSize="15"
+            Click="removeButton_Click"
+            Margin="259,273,0,0" Name="button2" VerticalAlignment="Top" Width="119" />
+	</Grid>
+</UserControl>

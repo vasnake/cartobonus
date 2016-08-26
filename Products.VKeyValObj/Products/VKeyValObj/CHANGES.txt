@@ -1,0 +1,10 @@
+# -*- mode: text; coding: utf-8 -*-
+# (c) Valik mailto:vasnake@gmail.com
+
+Version 3.0.0.alpha
+
+  - Product (addod) prototype
+
+Version 2.0.0
+
+  - Zope External Method vcu\uploads.py

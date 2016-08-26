@@ -1,0 +1,114 @@
+﻿<esri:Map
+	 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	 xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+	 xmlns:esriBing="clr-namespace:ESRI.ArcGIS.Client.Bing;assembly=ESRI.ArcGIS.Client.Bing"
+	 xmlns:esriMapping="http://schemas.esri.com/arcgis/mapping/2009"
+	 xmlns:esriExtensibility="http://schemas.esri.com/arcgis/client/extensibility/2010"
+	 xmlns:esriFSSymbols="clr-namespace:ESRI.ArcGIS.Client.FeatureService.Symbols;assembly=ESRI.ArcGIS.Client"
+	 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<esriMapping:ScaleBarExtensions.ScaleBarMapUnit>Meters</esriMapping:ScaleBarExtensions.ScaleBarMapUnit>
+	<esri:Map.IsLogoVisible>False</esri:Map.IsLogoVisible>
+	<esri:Map.Extent>
+		<esri:Envelope XMin="-11285601.9268761" XMax="-11186263.4820427" YMin="4441951.26311701" YMax="4491247.65567403">
+			<esri:Envelope.SpatialReference>
+				<esri:SpatialReference WKID="102100" />
+			</esri:Envelope.SpatialReference>
+		</esri:Envelope>
+	</esri:Map.Extent>
+	<esri:ArcGISTiledMapServiceLayer ID="Topographic" Url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" MinimumResolution="0">
+		<esriExtensibility:Document.IsBaseMap>true</esriExtensibility:Document.IsBaseMap>
+		<esriMapping:LayerExtensions.LayerName>Topographic</esriMapping:LayerExtensions.LayerName>
+		<esriMapping:LayerExtensions.LayerInfos />
+		<esriExtensibility:LayerProperties.IsPopupEnabled>true</esriExtensibility:LayerProperties.IsPopupEnabled>
+		<esriExtensibility:LayerProperties.IsVisibleInMapContents>true</esriExtensibility:LayerProperties.IsVisibleInMapContents>
+	</esri:ArcGISTiledMapServiceLayer>
+	<esri:FeatureLayer ID="dc7ebc0d61994bbf8bf44e2428c6ed42" RendererTakesPrecedence="True" Url="http://sampleserver3.arcgisonline.com/arcgis/rest/services/Petroleum/KSPetro/MapServer/1" Mode="OnDemand" OutFields="*">
+		<esriMapping:LayerExtensions.LayerName>Fields</esriMapping:LayerExtensions.LayerName>
+		<esriMapping:LayerExtensions.DisplayUrl>http://sampleserver3.arcgisonline.com/arcgis/rest/services/Petroleum/KSPetro/MapServer/1</esriMapping:LayerExtensions.DisplayUrl>
+		<esriMapping:LayerExtensions.LayerInfos />
+		<esriExtensibility:LayerProperties.IsPopupEnabled>true</esriExtensibility:LayerProperties.IsPopupEnabled>
+		<esriExtensibility:LayerProperties.IsVisibleInMapContents>true</esriExtensibility:LayerProperties.IsVisibleInMapContents>
+		<esriMapping:LayerExtensions.GeometryType>Polygon</esriMapping:LayerExtensions.GeometryType>
+		<esriMapping:LayerExtensions.GradientBrush>
+			<LinearGradientBrush>
+				<GradientStop Color="#FF090991" Offset="0" />
+				<GradientStop Color="#FFB6EDF0" Offset="1" />
+			</LinearGradientBrush>
+		</esriMapping:LayerExtensions.GradientBrush>
+		<esriMapping:LayerExtensions.Fields>
+			<esriMapping:FieldInfo Name="FIELD_KID" DisplayName="Field KID" AliasOnServer="Field KID" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="APPROXACRE" DisplayName="Approximate Acre" FieldType="DecimalNumber" AliasOnServer="Approximate Acre" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="FIELD_NAME" DisplayName="Field Name" AliasOnServer="Field Name" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="STATUS" DisplayName="Status" AliasOnServer="Status" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="PROD_GAS" DisplayName="Production Gas" AliasOnServer="Production Gas" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="PROD_OIL" DisplayName="Production Oil" AliasOnServer="Production Oil" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="ACTIVEPROD" DisplayName="Active Production" AliasOnServer="Active Production" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="CUMM_OIL" DisplayName="Cumulative Oil" FieldType="DecimalNumber" AliasOnServer="Cumulative Oil" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="MAXOILWELL" DisplayName="Max Oil Well" FieldType="DecimalNumber" AliasOnServer="Max Oil Well" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="LASTOILPRO" DisplayName="Last Oil Production" FieldType="DecimalNumber" AliasOnServer="Last Oil Production" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="LASTOILWEL" DisplayName="Last Oil Well" FieldType="DecimalNumber" AliasOnServer="Last Oil Well" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="LASTODATE" DisplayName="Last Oil Date" AliasOnServer="Last Oil Date" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="CUMM_GAS" DisplayName="Cumulative Gas" FieldType="DecimalNumber" AliasOnServer="Cumulative Gas" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="MAXGASWELL" DisplayName="Max Gas Well" FieldType="DecimalNumber" AliasOnServer="Max Gas Well" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="LASTGASPRO" DisplayName="Last Gas Production" FieldType="DecimalNumber" AliasOnServer="Last Gas Production" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="LASTGASWEL" DisplayName="Last Gas Well" FieldType="DecimalNumber" AliasOnServer="Last Gas Well" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="LASTGDATE" DisplayName="Last Gas Date" AliasOnServer="Last Gas Date" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="AVGDEPTH" DisplayName="Average Depth" FieldType="DecimalNumber" AliasOnServer="Average Depth" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="AVGDEPTHSL" DisplayName="Average Depth SL" FieldType="DecimalNumber" AliasOnServer="Average Depth SL" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="POLYDATE" DisplayName="Poly Date" FieldType="DateTime" AliasOnServer="Poly Date" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="FIELD_TYPE" DisplayName="Field Type" AliasOnServer="Field Type" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="FIELD_KIDN" DisplayName="Field KID" FieldType="DecimalNumber" AliasOnServer="Field KID" DomainSubtypeLookup="None" />
+		</esriMapping:LayerExtensions.Fields>
+		<esriMapping:LayerExtensions.DisplayField>FIELD_NAME</esriMapping:LayerExtensions.DisplayField>
+		<esriMapping:LayerExtensions.PopUpsOnClick>True</esriMapping:LayerExtensions.PopUpsOnClick>
+	</esri:FeatureLayer>
+	<esri:FeatureLayer ID="b25096fc4e6e4ad2a2a8f731d61adcf8" RendererTakesPrecedence="True" Url="http://sampleserver3.arcgisonline.com/arcgis/rest/services/Petroleum/KSPetro/MapServer/0" Mode="OnDemand" OutFields="*">
+		<esriMapping:LayerExtensions.LayerName>Wells</esriMapping:LayerExtensions.LayerName>
+		<esriMapping:LayerExtensions.DisplayUrl>http://sampleserver3.arcgisonline.com/arcgis/rest/services/Petroleum/KSPetro/MapServer/0</esriMapping:LayerExtensions.DisplayUrl>
+		<esriMapping:LayerExtensions.LayerInfos />
+		<esriExtensibility:LayerProperties.IsPopupEnabled>true</esriExtensibility:LayerProperties.IsPopupEnabled>
+		<esriExtensibility:LayerProperties.IsVisibleInMapContents>true</esriExtensibility:LayerProperties.IsVisibleInMapContents>
+		<esriMapping:LayerExtensions.GeometryType>Point</esriMapping:LayerExtensions.GeometryType>
+		<esriMapping:LayerExtensions.GradientBrush>
+			<LinearGradientBrush>
+				<GradientStop Color="#FF090991" Offset="0" />
+				<GradientStop Color="#FFB6EDF0" Offset="1" />
+			</LinearGradientBrush>
+		</esriMapping:LayerExtensions.GradientBrush>
+		<esriMapping:LayerExtensions.Fields>
+			<esriMapping:FieldInfo Name="KID" DisplayName="KID" FieldType="DecimalNumber" AliasOnServer="KID" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="API_WELL_N" DisplayName="API Well Number" FieldType="Integer" AliasOnServer="API Well Number" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="FIELD_NAME" DisplayName="FIELD NAME" AliasOnServer="FIELD NAME" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="FIELD_KID" DisplayName="FIELD KID" FieldType="DecimalNumber" AliasOnServer="FIELD KID" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="LEASE_NAME" DisplayName="LEASE NAME" AliasOnServer="LEASE NAME" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="WELL_NAME" DisplayName="WELL NAME" AliasOnServer="WELL NAME" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="WELL_CLASS" DisplayName="WELL CLASS" AliasOnServer="WELL CLASS" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="OPERATOR_N" DisplayName="OPERATOR NAME" AliasOnServer="OPERATOR NAME" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="OPERATOR_K" DisplayName="OPERATOR KID" FieldType="DecimalNumber" AliasOnServer="OPERATOR KID" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="LATITUDE" DisplayName="LATITUDE" FieldType="DecimalNumber" AliasOnServer="LATITUDE" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="LONGITUDE" DisplayName="LONGITUDE" FieldType="DecimalNumber" AliasOnServer="LONGITUDE" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="ELEVATION" DisplayName="ELEVATION" FieldType="DecimalNumber" AliasOnServer="ELEVATION" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="STATUS" DisplayName="STATUS" AliasOnServer="STATUS" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="SPUD_DATE" DisplayName="SPUD DATE" FieldType="DateTime" AliasOnServer="SPUD DATE" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="PERMIT_DAT" DisplayName="PERMIT DATE" FieldType="DateTime" AliasOnServer="PERMIT DATE" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="COMPLETION" DisplayName="COMPLETION DATE" FieldType="DateTime" AliasOnServer="COMPLETION DATE" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="PLUG_DATE" DisplayName="PLUG DATE" FieldType="DateTime" AliasOnServer="PLUG DATE" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="WELL_HEADE" DisplayName="WELL HEADER" FieldType="DecimalNumber" AliasOnServer="WELL HEADER" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="PRODUCING_" DisplayName="PRODUCING FORMATION" AliasOnServer="PRODUCING FORMATION" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="WELL_TYPE" DisplayName="WELL TYPE" AliasOnServer="WELL TYPE" DomainSubtypeLookup="None" />
+			<esriMapping:FieldInfo Name="WELL_DEPTH_SEALEVEL" DisplayName="DEPTH MSL" FieldType="Integer" AliasOnServer="DEPTH MSL" DomainSubtypeLookup="None" />
+		</esriMapping:LayerExtensions.Fields>
+		<esriMapping:LayerExtensions.DisplayField>FIELD_NAME</esriMapping:LayerExtensions.DisplayField>
+		<esriMapping:LayerExtensions.PopUpsOnClick>True</esriMapping:LayerExtensions.PopUpsOnClick>
+		<esri:GraphicsLayer.Renderer>
+			<esri:SimpleRenderer>
+				<esri:SimpleRenderer.Symbol>
+					<esriFSSymbols:SimpleMarkerSymbol>
+						<esriMapping:SymbolExtensions.Json>{"type":"esriSMS","style":"esriSMSCircle","color":[166,36,0,255],"size":4,"angle":0,"xoffset":0,"yoffset":0,"outline":{"color":[0,0,0,255],"width":1}}</esriMapping:SymbolExtensions.Json>
+					</esriFSSymbols:SimpleMarkerSymbol>
+				</esri:SimpleRenderer.Symbol>
+			</esri:SimpleRenderer>
+		</esri:GraphicsLayer.Renderer>
+	</esri:FeatureLayer>
+</esri:Map>

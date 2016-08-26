@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+# -*- mode: xml; coding: utf-8 -*-
+# (c) Valik mailto:vasnake@gmail.com
+MS Silverlight policy file.
+Put this file in the root folder of you site
+-->
+<access-policy>
+	<cross-domain-access>
+		<policy>
+			<allow-from http-request-headers="*">
+				<domain uri="*"/>
+				<domain uri="http://*"/>
+				<domain uri="https://*"/>
+			</allow-from>
+			<grant-to>
+				<resource path="/" include-subpaths="true"/>
+			</grant-to>
+		</policy>
+	</cross-domain-access>
+</access-policy>

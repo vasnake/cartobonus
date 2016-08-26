@@ -1,0 +1,101 @@
+{% extends "common.layout.html" %}
+
+{% block sidemenu %}
+	<li><a href="/cartobonus/">Картобонус</a></li>
+	<li><a href="/cartobonus/help/">Справка</a></li>
+	<li class="active"><a href="{{ url_for('cabinetPage') }}">Кабинет</a></li>
+{% endblock %}
+
+{% block mainblockspan9 %}
+	<h2>Редактирование надписей на кнопках</h2>
+
+	<form class="form-horizontal" enctype="multipart/form-data" method="post"
+		action="{{ url_for('savelabels') }}" name="labelsForm">
+		<legend>Список всех надписей</legend>
+		<div class="control-group">
+		<pre>Формат: номер строки ;; название (Label) ;; описание (Description)</pre>
+		<select class="span12" name="newlist" id="newlist" size="17">
+			{% for x in dataList %}
+			<option value="{{ x }}">{{ x }}</option>
+			{% endfor %}
+		</select>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="labelText">Название</label>
+			<div class="controls">
+				<input class="span9" type="text" name="labelText" placeholder="select from list" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="descriptionText">Описание</label>
+			<div class="controls">
+				<input class="span9" type="text" name="descriptionText" placeholder="select from list" />
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<button type="button" class="btn" onclick="javascript:saveItem()">Сохранить</button>
+			</div>
+		</div>
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary" onclick="javascript:sendData()">Отправить...</button>
+		</div>
+		<textarea name="text4save" class="span12" style="display:none;" wrap="off">
+			{% for x in dataList %}{{ x }}
+			{% endfor %}
+		</textarea>
+	</form>
+
+	<p>
+		Сценарий работы такой: выберите в списке строку для редактирования.
+		В двух текстовых полях ниже («Название» и «Описание») появится текст, который можно править.
+		Внесите желаемые правки в текст и нажмите кнопку «Сохранить». Это приведет к обновлению списка.
+		Следует понимать, что список в этот момент обновляется только в вашем браузере, на сервере же обновлений не происходит.
+		Чтобы отправить сделанные изменения на сервер, фактически сохранив свои правки, нажмите кнопку «Отправить».
+		Данные будут переданы на сервер, после чего можно будет открыть программу Картобонус и убедиться в корректности
+		сделанных правок.
+		Учтите, перед проверкой необходимо очистить кеш браузера.
+		<br />
+		Удачи.
+	</p>
+{% endblock %}
+
+{% block extrascripts %}
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#newlist").change(function() {
+		$("[name='labelText']").val("");
+		$("[name='descriptionText']").val("");
+        var lstRow = $(this).val();
+		var rowItems = lstRow.split(";;");
+		$("[name='labelText']").val(rowItems[1].trim());
+		$("[name='descriptionText']").val(rowItems[2].trim());
+    });
+});
+
+function saveItem() {
+	$("#newlist option:selected").each(
+		function() {
+			var oldval = $(this).val();
+			var oldItems = oldval.split(";;");
+			var newval = oldItems[0].trim() + " ;; " + $("[name='labelText']").val().trim() + " ;; " + $("[name='descriptionText']").val().trim();
+			$(this).val(newval);
+			$(this).text(newval);
+		}
+	);
+	$("[name='text4save']").val("");
+	$("#newlist option").each(
+		function() {
+			var rec = $(this).val();
+			$("[name='text4save']").val($("[name='text4save']").val() + rec + "\n");
+		}
+	);
+	return false;
+}
+
+function sendData() {
+	saveItem()
+	return true;
+}
+</script>
+{% endblock %}

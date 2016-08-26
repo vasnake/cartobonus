@@ -1,0 +1,4 @@
+{
+    "proxyUrl": "http://servicesbeta3.esri.com/SilverlightDemos/ProxyPage/proxy.ashx",
+    "proxyUrlDescr": "Специальный сервер-посредник, чтобы обойти ограничения системы безопасности сильверлайт на тему кроссдоменных запросов"
+}

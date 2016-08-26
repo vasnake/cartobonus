@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ViewerApplication LogoFilePath="Images/logo.png" LayoutFilePath="Config/Layouts/Glass.xaml">
+  <TitleText>ArcGIS Viewer for Silverlight</TitleText>
+  <Version>3.0.0.0</Version>
+  <HelpLinks>
+    <HelpLink>
+      <DisplayText>Справка</DisplayText>
+      <Url>http://links.esri.com/silverlightviewer</Url>
+    </HelpLink>
+    <HelpLink>
+      <DisplayText>Форумы</DisplayText>
+      <Url>http://forums.arcgis.com/forums/211-ArcGIS-Viewer-for-Silverlight</Url>
+    </HelpLink>
+    <HelpLink>
+      <DisplayText>Блог</DisplayText>
+      <Url>http://blogs.esri.com/Dev/blogs/silverlightwpf/</Url>
+    </HelpLink>
+  </HelpLinks>
+  <Extensions>
+    <Extension Url="Extensions/SearchTool.AddIns.xap" />
+  </Extensions>
+</ViewerApplication>

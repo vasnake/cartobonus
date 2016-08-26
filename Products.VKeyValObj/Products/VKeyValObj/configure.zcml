@@ -1,0 +1,6 @@
+<configure xmlns:browser="http://namespaces.zope.org/browser">
+    <browser:resourceDirectory
+        name="VKeyValObj"
+        directory="static"
+    />
+</configure>

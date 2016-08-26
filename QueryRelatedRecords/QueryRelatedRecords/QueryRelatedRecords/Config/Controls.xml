@@ -1,0 +1,23 @@
+﻿<Controls>
+  <Control Name="EditorConfiguration">
+    <Control.ConfigData>
+      <EditorConfiguration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ESRI.ArcGIS.Client.Application.Controls">
+        <EditValuesTool>true</EditValuesTool>
+        <AlwaysDisplayDefaultTemplates>true</AlwaysDisplayDefaultTemplates>
+        <AutoSelect>true</AutoSelect>
+        <ShowAttributesOnAdd>true</ShowAttributesOnAdd>
+        <AutoSave>true</AutoSave>
+        <EditingShapesEnabled>true</EditingShapesEnabled>
+      </EditorConfiguration>
+    </Control.ConfigData>
+  </Control>
+  <Control Name="MapContents">
+    <Control.ConfigData>
+      <MapContentsConfiguration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ESRI.ArcGIS.Client.Application.Controls.MapContents">
+        <Mode>Contents</Mode>
+        <ContextMenuToolPanelName>LayerConfigurationContextMenuContainer</ContextMenuToolPanelName>
+        <AllowLayerSelection>true</AllowLayerSelection>
+      </MapContentsConfiguration>
+    </Control.ConfigData>
+  </Control>
+</Controls>

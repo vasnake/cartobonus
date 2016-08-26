@@ -1,0 +1,12 @@
+# -*- mode: text; coding: utf-8 -*-
+# (c) Valik mailto:vasnake@gmail.com
+
+VCU v.1
+Zope External Method, protocol v.1
+
+VCU v.2
+Zope External Method, protocol v.2
+
+VCU v.3
+Zope Product (addon) VCUFile, behave like regular Zope File except
+using filesistem for storage and chunked upload.

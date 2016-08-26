@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FloatableWindow">
+</Property><Property Name="Solution File" Value="C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\FloatableWindow.sln">
+</Property><Property Name="Date" Value="8 декабря 2011 г.">
+</Property><Property Name="Time" Value="17:26:10">
+</Property></Properties><Event ErrorLevel="0" Project="FloatableWindow" Source="FloatableWindow.csproj" Description="Project file successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\FloatableWindow.csproj">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="FloatableWindow.cs" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\FloatableWindow.cs">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="FloatableWindowAutomationPeer.cs" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\FloatableWindowAutomationPeer.cs">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="GlobalSuppressions.cs" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\GlobalSuppressions.cs">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="ResizeMode.cs" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\ResizeMode.cs">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="FloatableWindowStrongNameKey.snk" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\FloatableWindowStrongNameKey.snk">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="README.txt" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\README.txt">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="Properties\Resources.resx" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="themes\generic.xaml" Description="File successfully backed up as C:\d\code\sl.esri.mapservices.dir\t\FloatableWindow\Backup\themes\generic.xaml">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="FloatableWindow.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="FloatableWindow" Source="FloatableWindow.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FloatableWindow" Source="FloatableWindow.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

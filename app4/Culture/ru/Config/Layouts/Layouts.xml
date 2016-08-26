@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Layouts>
+    <Layout DisplayName="Аккордеон" File="Config/Layouts/Accordion.xaml" PreviewImage="Config/Layouts/Accordion.png" />
+    <Layout DisplayName="Основной" File="Config/Layouts/Basic.xaml" PreviewImage="Config/Layouts/Basic.png" />
+    <Layout DisplayName="Черный прямоугольник" File="Config/Layouts/BlackBox.xaml" PreviewImage="Config/Layouts/BlackBox.png" />
+    <Layout DisplayName="Черный прямоугольник - перевернутый" File="Config/Layouts/BlackBox_-_Reverse.xaml" PreviewImage="Config/Layouts/BlackBox_-_Reverse.png" />
+    <Layout DisplayName="Плавающие панели" File="Config/Layouts/FloatingPanels.xaml" PreviewImage="Config/Layouts/FloatingPanels.png" />
+    <Layout DisplayName="Стекло" File="Config/Layouts/Glass.xaml" PreviewImage="Config/Layouts/Glass.png" />
+    <Layout DisplayName="Эффект подсветки" File="Config/Layouts/UnderGlow.xaml" PreviewImage="Config/Layouts/UnderGlow.png" />
+    <Layout DisplayName="Крылья" File="Config/Layouts/Wings.xaml" PreviewImage="Config/Layouts/Wings.png" />
+</Layouts>

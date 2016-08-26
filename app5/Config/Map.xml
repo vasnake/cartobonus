@@ -1,0 +1,26 @@
+﻿<esri:Map
+	 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	 xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+	 xmlns:esriBing="clr-namespace:ESRI.ArcGIS.Client.Bing;assembly=ESRI.ArcGIS.Client.Bing"
+	 xmlns:esriMapping="http://schemas.esri.com/arcgis/mapping/2009"
+	 xmlns:esriExtensibility="http://schemas.esri.com/arcgis/client/extensibility/2010"
+	 xmlns:esriFSSymbols="clr-namespace:ESRI.ArcGIS.Client.FeatureService.Symbols;assembly=ESRI.ArcGIS.Client"
+	 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<esriMapping:ScaleBarExtensions.ScaleBarMapUnit>Meters</esriMapping:ScaleBarExtensions.ScaleBarMapUnit>
+	<esri:Map.IsLogoVisible>False</esri:Map.IsLogoVisible>
+	<esri:Map.Extent>
+		<esri:Envelope XMin="-14696330.8427892" XMax="25378685.8427892" YMin="-3755009.75107919" YMax="16509094.0010792">
+			<esri:Envelope.SpatialReference>
+				<esri:SpatialReference WKID="102100" />
+			</esri:Envelope.SpatialReference>
+		</esri:Envelope>
+	</esri:Map.Extent>
+	<esri:OpenStreetMapLayer ID="fd70cf3378a14672abb46d081bfc4f72">
+		<esriExtensibility:Document.IsBaseMap>true</esriExtensibility:Document.IsBaseMap>
+		<esriMapping:LayerExtensions.LayerName>OpenStreetMap</esriMapping:LayerExtensions.LayerName>
+		<esriMapping:LayerExtensions.LayerInfos />
+		<esriExtensibility:LayerProperties.IsPopupEnabled>true</esriExtensibility:LayerProperties.IsPopupEnabled>
+		<esriExtensibility:LayerProperties.IsVisibleInMapContents>true</esriExtensibility:LayerProperties.IsVisibleInMapContents>
+	</esri:OpenStreetMapLayer>
+</esri:Map>

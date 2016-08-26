@@ -1,0 +1,13 @@
+﻿<Behaviors xmlns:esri="http://schemas.esri.com/arcgis/mapping/2009" xmlns:Ice="clr-namespace:Ice.AddIns;assembly=Ice.AddIns">
+  <Behavior IsEnabled="True" Title="Identify">
+    <Behavior.Class>
+      <esri:IdentifyBehavior />
+    </Behavior.Class>
+  </Behavior>
+  <Behavior IsEnabled="True" Title="Ice">
+    <Behavior.Class>
+      <Ice:IceBehavior />
+    </Behavior.Class>
+    <Behavior.ConfigData>http://cache.algis.com/ArcGIS/rest/services/Возраст_(толщина)_льда/MapServer</Behavior.ConfigData>
+  </Behavior>
+</Behaviors>

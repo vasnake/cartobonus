@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Symbols>
+  <ResourceDictionary>
+    <ID>BasicFillSymbols</ID>
+    <Path>BasicFillSymbols.json.txt</Path>
+    <GeometryType>Polygon</GeometryType>
+    <DisplayName>Standard</DisplayName>
+  </ResourceDictionary>
+  <ResourceDictionary>
+    <ID>BasicLineSymbols</ID>
+    <Path>BasicLineSymbols.json.txt</Path>
+    <GeometryType>Polyline</GeometryType>
+    <DisplayName>Standard</DisplayName>
+  </ResourceDictionary>
+  <ResourceDictionary>
+    <ID>Basic</ID>
+    <Path>BasicSymbols.json.txt</Path>
+    <GeometryType>Point</GeometryType>
+    <DisplayName>Standard</DisplayName>
+  </ResourceDictionary>
+  <ResourceDictionary>
+    <ID>Color</ID>
+    <Path>ColorSymbols.json.txt</Path>
+    <GeometryType>Point</GeometryType>
+    <DisplayName>Color</DisplayName>
+  </ResourceDictionary>
+  <ResourceDictionary>
+    <ID>BusinessSymbols</ID>
+    <Path>BusinessSymbols.json.txt</Path>
+    <GeometryType>Point</GeometryType>
+    <DisplayName>Business</DisplayName>
+  </ResourceDictionary>
+  <ResourceDictionary>
+    <ID>CartographySymbols</ID>
+    <Path>CartographySymbols.json.txt</Path>
+    <GeometryType>Point</GeometryType>
+    <DisplayName>Cartography</DisplayName>
+  </ResourceDictionary>
+  <ResourceDictionary>
+    <ID>OutdoorRecreationSymbols</ID>
+    <Path>OutdoorRecreationSymbols.json.txt</Path>
+    <GeometryType>Point</GeometryType>
+    <DisplayName>Outdoor Recreation</DisplayName>
+  </ResourceDictionary>
+  <ResourceDictionary>
+    <ID>PeoplePlacesSymbols</ID>
+    <Path>PeoplePlacesSymbols.json.txt</Path>
+    <GeometryType>Point</GeometryType>
+    <DisplayName>People and Places</DisplayName>
+  </ResourceDictionary>
+  <ResourceDictionary>
+    <ID>SafetyHealthSymbols</ID>
+    <Path>SafetyHealthSymbols.json.txt</Path>
+    <GeometryType>Point</GeometryType>
+    <DisplayName>Public Safety and Health</DisplayName>
+  </ResourceDictionary>
+  <ResourceDictionary>
+    <ID>TransportationSymbols</ID>
+    <Path>TransportationSymbols.json.txt</Path>
+    <GeometryType>Point</GeometryType>
+    <DisplayName>Transportation</DisplayName>
+  </ResourceDictionary>
+</Symbols>

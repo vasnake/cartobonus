@@ -1,0 +1,415 @@
+<!--
+# -*- mode: xml; coding: utf-8 -*-
+-->
+<Layers>
+<!--
+примеры слоев разных типов:
+-->
+	<Layer id="mxd" type="ArcGISDynamicMapServiceLayer "
+		name="Меридианы, параллели" topic="География">
+		http://rngis.algis.com/ArcGIS/rest/services/mesh/MapServer
+	</Layer>
+	<Layer id="mxd.lyr" type="FeatureLayer "
+		name="Подслой службы с сеткой" topic="География">
+		http://rngis.algis.com/ArcGIS/rest/services/mesh/MapServer/0
+	</Layer>
+	<Layer id="mxd.tiled" type="ArcGISTiledMapServiceLayer"
+		name="Сейсмоплотность" topic="Батиметрия">
+		http://rngis.algis.com/ArcGIS/rest/services/seismodenstiled/MapServer
+	</Layer>
+	<Layer id="mxd.solt-temp" type="ArcGISDynamicMapServiceLayer "
+		name="Черное море темп.сол." topic="Батиметрия">
+		http://rngis.algis.com/ArcGIS/rest/services/blacksea.temp.salt/MapServer
+	</Layer>
+
+<!--
+	<Layer id="1" type="ArcGISDynamicMapServiceLayer"
+		name="Балтийское море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%91%d0%b0%d0%bb%d1%82%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="2" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="3" type="ArcGISDynamicMapServiceLayer"
+		name="Белое море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%91%d0%b5%d0%bb%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="4" type="ArcGISDynamicMapServiceLayer"
+		name="Берингово море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%91%d0%b5%d1%80%d0%b8%d0%bd%d0%b3%d0%be%d0%b2%d0%be_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="5" type="ArcGISDynamicMapServiceLayer"
+		name="Восточно-Сибирское море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%92%d0%be%d1%81%d1%82%d0%be%d1%87%d0%bd%d0%be_%d0%a1%d0%b8%d0%b1%d0%b8%d1%80%d1%81%d0%ba%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="6" type="ArcGISDynamicMapServiceLayer"
+		name="Карское море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="7" type="ArcGISDynamicMapServiceLayer"
+		name="Каспийское море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%9a%d0%b0%d1%81%d0%bf%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="8" type="ArcGISDynamicMapServiceLayer"
+		name="Море Лаптевых. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%9c%d0%be%d1%80%d0%b5_%d0%9b%d0%b0%d0%bf%d1%82%d0%b5%d0%b2%d1%8b%d1%85.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="9" type="ArcGISDynamicMapServiceLayer"
+		name="Охотское море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%9e%d1%85%d0%be%d1%82%d1%81%d0%ba%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="10" type="ArcGISDynamicMapServiceLayer"
+		name="Печорское море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%9f%d0%b5%d1%87%d0%be%d1%80%d1%81%d0%ba%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="11" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Изобаты (ДПУ)" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b_%d0%94%d0%9f%d0%a3/MapServer
+	</Layer>
+
+
+	<Layer id="12" type="ArcGISDynamicMapServiceLayer"
+		name="Черное море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%a7%d0%b5%d1%80%d0%bd%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="13" type="ArcGISDynamicMapServiceLayer"
+		name="Чукотское море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%a7%d1%83%d0%ba%d0%be%d1%82%d1%81%d0%ba%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="14" type="ArcGISDynamicMapServiceLayer"
+		name="Японское море. Изобаты" topic="Батиметрия">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d0%b0%d1%82%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%8f/%d0%af%d0%bf%d0%be%d0%bd%d1%81%d0%ba%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%98%d0%b7%d0%be%d0%b1%d0%b0%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="15" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Скважины" topic="Бурение">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%91%d1%83%d1%80%d0%b5%d0%bd%d0%b8%d0%b5/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%a1%d0%ba%d0%b2%d0%b0%d0%b6%d0%b8%d0%bd%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="16" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево-Карский регион. Физгеография 2,5М" topic="География">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9.%d0%a4%d0%b8%d0%b7_%d0%93%d0%b5%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%8f_2,5%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="17" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Административные регионы (ДПУ)" topic="География">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%90%d0%b4%d0%bc%d0%b8%d0%bd%d0%a0%d0%b5%d0%b3%d0%b8%d0%be%d0%bd%d1%8b_%d0%94%d0%9f%d0%a3/MapServer
+	</Layer>
+
+
+	<Layer id="18" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Береговая линия и границы акваторий" topic="География">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%91%d0%b5%d1%80%d0%b5%d0%b3%d0%be%d0%b2%d0%b0%d1%8f_%d0%bb%d0%b8%d0%bd%d0%b8%d1%8f_%d0%b8_%d0%b3%d1%80%d0%b0%d0%bd%d0%b8%d1%86%d1%8b_%d0%b0%d0%ba%d0%b2%d0%b0%d1%82%d0%be%d1%80%d0%b8%d0%b9/MapServer
+	</Layer>
+
+
+	<Layer id="19" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Моря и океаны (ДПУ)" topic="География">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9c%d0%be%d1%80%d1%8f_%d0%be%d0%ba%d0%b5%d0%b0%d0%bd%d1%8b_%d0%94%d0%9f%d0%a3/MapServer
+	</Layer>
+
+
+	<Layer id="20" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево-Карский регион. Карта нефтегазоносности 2,5М" topic="Геология нефтепромысловая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%bd%d0%b5%d1%84%d1%82%d1%8f%d0%bd%d0%b0%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9.%d0%9a%d0%b0%d1%80%d1%82%d0%b0_%d0%bd%d0%b5%d1%84%d1%82%d0%b5%d0%b3%d0%b0%d0%b7%d0%be%d0%bd%d0%be%d1%81%d0%bd%d0%be%d1%81%d1%82%d0%b8_2,5%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="21" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Локальные структуры (ДПУ КНТЦ)" topic="Геология нефтепромысловая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%bd%d0%b5%d1%84%d1%82%d1%8f%d0%bd%d0%b0%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9b%d0%be%d0%ba%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5_%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d1%8b_%d0%94%d0%9f%d0%a3_%d0%9a%d0%9d%d0%a2%d0%a6/MapServer
+	</Layer>
+
+
+	<Layer id="22" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Месторождения" topic="Геология нефтепромысловая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%bd%d0%b5%d1%84%d1%82%d1%8f%d0%bd%d0%b0%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9c%d0%b5%d1%81%d1%82%d0%be%d1%80%d0%be%d0%b6%d0%b4%d0%b5%d0%bd%d0%b8%d1%8f/MapServer
+	</Layer>
+
+
+	<Layer id="23" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. НГ районирование (ДПУ)" topic="Геология нефтепромысловая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%bd%d0%b5%d1%84%d1%82%d1%8f%d0%bd%d0%b0%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9d%d0%93_%d1%80%d0%b0%d0%b9%d0%be%d0%bd%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5_%d0%94%d0%9f%d0%a3/MapServer
+	</Layer>
+
+
+	<Layer id="24" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. НГ районирование (КНТЦ)" topic="Геология нефтепромысловая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%bd%d0%b5%d1%84%d1%82%d1%8f%d0%bd%d0%b0%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9d%d0%93_%d1%80%d0%b0%d0%b9%d0%be%d0%bd%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5_%d0%9a%d0%9d%d0%a2%d0%a6/MapServer
+	</Layer>
+
+
+	<Layer id="25" type="ArcGISDynamicMapServiceLayer"
+		name="Арктика. Карта осадконакопления" topic="Геология общая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%be%d0%b1%d1%89%d0%b0%d1%8f/%d0%90%d1%80%d0%ba%d1%82%d0%b8%d0%ba%d0%b0.%d0%9a%d0%b0%d1%80%d1%82%d0%b0_%d0%be%d1%81%d0%b0%d0%b4%d0%ba%d0%be%d0%bd%d0%b0%d0%ba%d0%be%d0%bf%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f/MapServer
+	</Layer>
+
+
+	<Layer id="26" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево-Карский регион. Карта дочетвертичных образований 1М" topic="Геология общая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%be%d0%b1%d1%89%d0%b0%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9.%d0%9a%d0%b0%d1%80%d1%82%d0%b0_%d0%b4%d0%be%d1%87%d0%b5%d1%82%d0%b2%d0%b5%d1%80%d1%82%d0%b8%d1%87%d0%bd_%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b9_1%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="27" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево-Карский регион. Карта четвертичных образований 1М" topic="Геология общая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%be%d0%b1%d1%89%d0%b0%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9.%d0%9a%d0%b0%d1%80%d1%82%d0%b0_%d1%87%d0%b5%d1%82%d0%b2%d0%b5%d1%80%d1%82%d0%b8%d1%87%d0%bd_%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b9_1%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="28" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево-Карский регион. Палеогеография 5М" topic="Геология общая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%be%d0%b1%d1%89%d0%b0%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9.%d0%9f%d0%b0%d0%bb%d0%b5%d0%be%d0%b3%d0%b5%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%8f_5%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="29" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево море. Рифогенные постройки" topic="Геология общая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%be%d0%b1%d1%89%d0%b0%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be_%d0%bc%d0%be%d1%80%d0%b5.%d0%a0%d0%b8%d1%84%d0%be%d0%b3%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5_%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="30" type="ArcGISDynamicMapServiceLayer"
+		name="Каспийское море. Рифогенные постройки" topic="Геология общая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%be%d0%b1%d1%89%d0%b0%d1%8f/%d0%9a%d0%b0%d1%81%d0%bf%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.%d0%a0%d0%b8%d1%84%d0%be%d0%b3%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5_%d0%bf%d0%be%d1%81%d1%82%d1%80%d0%be%d0%b9%d0%ba%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="31" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Геодинамическая карта" topic="Геология общая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%be%d0%b1%d1%89%d0%b0%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%93%d0%b5%d0%be%d0%b4%d0%b8%d0%bd%d0%b0%d0%bc%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f_%d0%ba%d0%b0%d1%80%d1%82%d0%b0/MapServer
+	</Layer>
+
+
+	<Layer id="32" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Геологическая карта 5М" topic="Геология общая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%be%d0%b1%d1%89%d0%b0%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f_%d0%ba%d0%b0%d1%80%d1%82%d0%b0_5%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="33" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Геологичечкие разрезы" topic="Геология общая">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d0%be%d0%b1%d1%89%d0%b0%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%93%d0%b5%d0%be%d0%bb_%d1%80%d0%b0%d0%b7%d1%80%d0%b5%d0%b7%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="34" type="ArcGISDynamicMapServiceLayer"
+		name="Карское море. Карты мощностей" topic="Геология структурная">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%bd%d0%b0%d1%8f/%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%be%d0%b5%20%d0%bc%d0%be%d1%80%d0%b5.%d0%9a%d0%b0%d1%80%d1%82%d1%8b_%d0%bc%d0%be%d1%89%d0%bd%d0%be%d1%81%d1%82%d0%b5%d0%b9/MapServer
+	</Layer>
+
+
+	<Layer id="35" type="ArcGISDynamicMapServiceLayer"
+		name="Карское море. Локальные структуры" topic="Геология структурная">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%bd%d0%b0%d1%8f/%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%be%d0%b5%20%d0%bc%d0%be%d1%80%d0%b5.%d0%9b%d0%be%d0%ba%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5_%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="36" type="ArcGISDynamicMapServiceLayer"
+		name="Карское море. Структурные карты" topic="Геология структурная">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%bd%d0%b0%d1%8f/%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%be%d0%b5%20%d0%bc%d0%be%d1%80%d0%b5.%d0%a1%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%bd%d1%8b%d0%b5_%d0%ba%d0%b0%d1%80%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="37" type="ArcGISDynamicMapServiceLayer"
+		name="Чукотское море. Карты мощностей" topic="Геология структурная">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%bd%d0%b0%d1%8f/%d0%a7%d1%83%d0%ba%d0%be%d1%82%d1%81%d0%ba%d0%be%d0%b5%20%d0%bc%d0%be%d1%80%d0%b5.%d0%9a%d0%b0%d1%80%d1%82%d1%8b_%d0%bc%d0%be%d1%89%d0%bd%d0%be%d1%81%d1%82%d0%b5%d0%b9/MapServer
+	</Layer>
+
+
+	<Layer id="38" type="ArcGISDynamicMapServiceLayer"
+		name="Чукотское море. Структурные карты" topic="Геология структурная">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f_%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%bd%d0%b0%d1%8f/%d0%a7%d1%83%d0%ba%d0%be%d1%82%d1%81%d0%ba%d0%be%d0%b5%20%d0%bc%d0%be%d1%80%d0%b5.%d0%a1%d1%82%d1%80%d1%83%d0%ba%d1%82%d1%83%d1%80%d0%bd%d1%8b%d0%b5_%d0%ba%d0%b0%d1%80%d1%82%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="39" type="ArcGISDynamicMapServiceLayer"
+		name="Арктика. Данные гравиметрической съёмки" topic="Геофизика">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d1%84%d0%b8%d0%b7%d0%b8%d0%ba%d0%b0/%d0%90%d1%80%d0%ba%d1%82%d0%b8%d0%ba%d0%b0.%d0%94%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5_%d0%b3%d1%80%d0%b0%d0%b2%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%be%d0%b9_%d1%81%d1%8a%d1%91%d0%bc%d0%ba%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="40" type="ArcGISDynamicMapServiceLayer"
+		name="Арктика. Данные магнитометрической съёмки" topic="Геофизика">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d1%84%d0%b8%d0%b7%d0%b8%d0%ba%d0%b0/%d0%90%d1%80%d0%ba%d1%82%d0%b8%d0%ba%d0%b0.%d0%94%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5_%d0%bc%d0%b0%d0%b3%d0%bd%d0%b8%d1%82%d0%be%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%be%d0%b9_%d1%81%d1%8a%d1%91%d0%bc%d0%ba%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="41" type="ArcGISDynamicMapServiceLayer"
+		name="Мир. Данные гравиметрической съёмки" topic="Геофизика">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d1%84%d0%b8%d0%b7%d0%b8%d0%ba%d0%b0/%d0%9c%d0%b8%d1%80.%d0%94%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5_%d0%b3%d1%80%d0%b0%d0%b2%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%be%d0%b9_%d1%81%d1%8a%d1%91%d0%bc%d0%ba%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="42" type="ArcGISDynamicMapServiceLayer"
+		name="Мир. Данные магнитометрической съёмки" topic="Геофизика">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d1%84%d0%b8%d0%b7%d0%b8%d0%ba%d0%b0/%d0%9c%d0%b8%d1%80.%d0%94%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5_%d0%bc%d0%b0%d0%b3%d0%bd%d0%b8%d1%82%d0%be%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%be%d0%b9_%d1%81%d1%8a%d1%91%d0%bc%d0%ba%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="43" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Изученность гравиметрическая" topic="Геофизика">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d1%84%d0%b8%d0%b7%d0%b8%d0%ba%d0%b0/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%98%d0%b7%d1%83%d1%87%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d1%8c_%d0%b3%d1%80%d0%b0%d0%b2%d0%b8%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f/MapServer
+	</Layer>
+
+
+	<Layer id="44" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Изученность магнитометрическая" topic="Геофизика">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d1%84%d0%b8%d0%b7%d0%b8%d0%ba%d0%b0/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%98%d0%b7%d1%83%d1%87%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d1%8c_%d0%bc%d0%b0%d0%b3%d0%bd%d0%b8%d1%82%d0%be%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f/MapServer
+	</Layer>
+
+
+	<Layer id="45" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Плотность сейсмоизученности" topic="Геофизика">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d1%84%d0%b8%d0%b7%d0%b8%d0%ba%d0%b0/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9f%d0%bb%d0%be%d1%82%d0%bd%d0%be%d1%81%d1%82%d1%8c%20%d1%81%d0%b5%d0%b9%d1%81%d0%bc%d0%be%d0%b8%d0%b7%d1%83%d1%87%d0%b5%d0%bd%d0%bd%d0%be%d1%81%d1%82%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="46" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Сейсморазведка площади" topic="Геофизика">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d1%84%d0%b8%d0%b7%d0%b8%d0%ba%d0%b0/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%a1%d0%b5%d0%b9%d1%81%d0%bc%d0%be%d1%80%d0%b0%d0%b7%d0%b2%d0%b5%d0%b4%d0%ba%d0%b0_%d0%bf%d0%bb%d0%be%d1%89%d0%b0%d0%b4%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="47" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Сейсморазведка профили" topic="Геофизика">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%93%d0%b5%d0%be%d1%84%d0%b8%d0%b7%d0%b8%d0%ba%d0%b0/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%a1%d0%b5%d0%b9%d1%81%d0%bc%d0%be%d1%80%d0%b0%d0%b7%d0%b2%d0%b5%d0%b4%d0%ba%d0%b0_%d0%bf%d1%80%d0%be%d1%84%d0%b8%d0%bb%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="48" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево-Карский регион. Литологическая карта 1М" topic="Литология">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9b%d0%b8%d1%82%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9.%d0%9b%d0%b8%d1%82%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f_%d0%ba%d0%b0%d1%80%d1%82%d0%b0_1%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="49" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево-Карский регион. Литолого фациальные схемы 5М" topic="Литология">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9b%d0%b8%d1%82%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9.%d0%9b%d0%b8%d1%82%d0%be%d0%bb%d0%be%d0%b3%d0%be_%d1%84%d0%b0%d1%86%d0%b8%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5_%d1%81%d1%85%d0%b5%d0%bc%d1%8b_5%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="50" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево-Карский регион. Станции донного опробования" topic="Литология">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9b%d0%b8%d1%82%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9.%d0%a1%d1%82%d0%b0%d0%bd%d1%86%d0%b8%d0%b8_%d0%b4%d0%be%d0%bd%d0%bd%d0%be%d0%b3%d0%be_%d0%be%d0%bf%d1%80%d0%be%d0%b1%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f/MapServer
+	</Layer>
+
+
+	<Layer id="51" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Лицензионные участки" topic="Лицензирование">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9b%d0%b8%d1%86%d0%b5%d0%bd%d0%b7%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9b%d0%b8%d1%86%d0%b5%d0%bd%d0%b7%d0%b8%d0%be%d0%bd%d0%bd%d1%8b%d0%b5_%d1%83%d1%87%d0%b0%d1%81%d1%82%d0%ba%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="52" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Перспективные участки" topic="Лицензирование">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9b%d0%b8%d1%86%d0%b5%d0%bd%d0%b7%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9f%d0%b5%d1%80%d1%81%d0%bf%d0%b5%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d1%8b%d0%b5_%d1%83%d1%87%d0%b0%d1%81%d1%82%d0%ba%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="53" type="ArcGISDynamicMapServiceLayer"
+		name="Арктика. Ледовые обстановки" topic="Океанология">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9e%d0%ba%d0%b5%d0%b0%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f/%d0%90%d1%80%d0%ba%d1%82%d0%b8%d0%ba%d0%b0.%d0%9b%d0%b5%d0%b4%d0%be%d0%b2%d1%8b%d0%b5%20%d0%be%d0%b1%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="54" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Граница шельфа" topic="Океанология">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9e%d0%ba%d0%b5%d0%b0%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%93%d1%80%d0%b0%d0%bd%d0%b8%d1%86%d0%b0_%d1%88%d0%b5%d0%bb%d1%8c%d1%84%d0%b0/MapServer
+	</Layer>
+
+
+	<Layer id="55" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Морские течения" topic="Океанология">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9e%d0%ba%d0%b5%d0%b0%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9c%d0%be%d1%80%d1%81%d0%ba%d0%b8%d0%b5_%d1%82%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d1%8f/MapServer
+	</Layer>
+
+
+	<Layer id="56" type="ArcGISDynamicMapServiceLayer"
+		name="Черное море. H2S" topic="Океанология">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9e%d0%ba%d0%b5%d0%b0%d0%bd%d0%be%d0%bb%d0%be%d0%b3%d0%b8%d1%8f/%d0%a7%d0%b5%d1%80%d0%bd%d0%be%d0%b5_%d0%bc%d0%be%d1%80%d0%b5.H2S/MapServer
+	</Layer>
+
+
+	<Layer id="57" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Топливно-энергетические ресурсы 5М" topic="Прочее">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%9f%d1%80%d0%be%d1%87%d0%b5%d0%b5/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%a2%d0%be%d0%bf%d0%bb%d0%b8%d0%b2%d0%bd%d0%be_%d1%8d%d0%bd%d0%b5%d1%80%d0%b3_%d1%80%d0%b5%d1%81%d1%83%d1%80%d1%81%d1%8b_5%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="58" type="ArcGISDynamicMapServiceLayer"
+		name="Мир. Исключительные экономические зоны" topic="Разграничение акваторий">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%a0%d0%b0%d0%b7%d0%b3%d1%80%d0%b0%d0%bd%d0%b8%d1%87%d0%b5%d0%bd%d0%b8%d0%b5/%d0%9c%d0%b8%d1%80.%d0%98%d1%81%d0%ba%d0%bb%d1%8e%d1%87%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5_%d0%ad%d0%ba%d0%be%d0%bd%d0%be%d0%bc_%d0%97%d0%be%d0%bd%d1%8b/MapServer
+	</Layer>
+
+
+	<Layer id="59" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Сейсморайонирование ОСР 97" topic="Сейсмоактивность">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%a1%d0%b5%d0%b9%d1%81%d0%bc%d0%be%d0%b0%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d0%be%d1%81%d1%82%d1%8c/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%a1%d0%b5%d0%b9%d1%81%d0%bc%d0%be%d1%80%d0%b0%d0%b9%d0%be%d0%bd%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5_%d0%9e%d0%a1%d0%a0_97/MapServer
+	</Layer>
+
+
+	<Layer id="60" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Эпицентры землетрясений" topic="Сейсмоактивность">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%a1%d0%b5%d0%b9%d1%81%d0%bc%d0%be%d0%b0%d0%ba%d1%82%d0%b8%d0%b2%d0%bd%d0%be%d1%81%d1%82%d1%8c/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%ad%d0%bf%d0%b8%d1%86%d0%b5%d0%bd%d1%82%d1%80%d1%8b%20%d0%b7%d0%b5%d0%bc%d0%bb%d0%b5%d1%82%d1%80%d1%8f%d1%81%d0%b5%d0%bd%d0%b8%d0%b9/MapServer
+	</Layer>
+
+
+	<Layer id="61" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Природоохранные территории" topic="Социальные и промышленные">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%a1%d0%be%d1%86%d0%b8%d0%b0%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5_%d0%b8_%d0%bf%d1%80%d0%be%d0%bc%d1%8b%d1%88%d0%bb%d0%b5%d0%bd%d0%bd%d1%8b%d0%b5_%d0%be%d0%b1%d1%8a%d0%b5%d0%ba%d1%82%d1%8b/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%9f%d1%80%d0%b8%d1%80%d0%be%d0%b4%d0%be%d0%be%d1%85%d1%80%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5_%d1%82%d0%b5%d1%80%d1%80%d0%b8%d1%82%d0%be%d1%80%d0%b8%d0%b8/MapServer
+	</Layer>
+
+
+	<Layer id="62" type="ArcGISDynamicMapServiceLayer"
+		name="Баренцево-Карский регион. Тектоническая карта 2,5М" topic="Тектоника">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%a2%d0%b5%d0%ba%d1%82%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%91%d0%b0%d1%80%d0%b5%d0%bd%d1%86%d0%b5%d0%b2%d0%be%d0%9a%d0%b0%d1%80%d1%81%d0%ba%d0%b8%d0%b9.%d0%a2%d0%b5%d0%ba%d1%82%d0%be%d0%bd%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f_%d0%ba%d0%b0%d1%80%d1%82%d0%b0_2,5%d0%9c/MapServer
+	</Layer>
+
+
+	<Layer id="63" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Тектоническое районирование шельфа (КНТЦ)" topic="Тектоника">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%a2%d0%b5%d0%ba%d1%82%d0%be%d0%bd%d0%b8%d0%ba%d0%b0/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%a2%d0%b5%d0%ba%d1%82%d0%be%d0%bd_%d1%80%d0%b0%d0%b9%d0%be%d0%bd%d0%b8%d1%80_%d1%88%d0%b5%d0%bb%d1%8c%d1%84%d0%b0_%d0%9a%d0%9d%d0%a2%d0%a6/MapServer
+	</Layer>
+
+
+	<Layer id="64" type="ArcGISDynamicMapServiceLayer"
+		name="Мир. Географическая основа" topic="Топография">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%a2%d0%be%d0%bf%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%8f/%d0%9c%d0%b8%d1%80.%d0%93%d0%b5%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f_%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%b0/MapServer
+	</Layer>
+
+
+	<Layer id="65" type="ArcGISDynamicMapServiceLayer"
+		name="Россия. Географическая основа" topic="Топография">
+		http://as2217/ArcGIS/rest/services/%d0%a8%d0%95%d0%9b%d0%ac%d0%a4_%d0%a2%d0%be%d0%bf%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%8f/%d0%a0%d0%be%d1%81%d1%81%d0%b8%d1%8f.%d0%93%d0%b5%d0%be%d0%b3%d1%80%d0%b0%d1%84%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b0%d1%8f%20%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%b0/MapServer
+	</Layer>
+-->
+</Layers>

@@ -1,0 +1,52 @@
+{
+	"displayFieldName" : "AREANAME",
+	"geometryType" : "esriGeometryPoint",
+	"spatialReference" : {"wkid" : 4326},
+	"fieldAliases" : {
+		"ST" : "State Name",
+		"POP2000" : "Population",
+		"AREANAME" : "City Name"
+		},
+	"features" : [
+		{
+			"attributes" : {
+			"ST" : "CA",
+			"POP2000" : 3694820,
+			"AREANAME" : "Los Angeles"
+			},
+			"geometry" : { "x" : -118.4, "y" : 34.1 }
+		},
+		{
+			"attributes" : {
+			"ST" : "WA",
+			"POP2000" : 563374,
+			"AREANAME" : "Seattle"
+			},
+			"geometry" : { "x" : -122.3, "y" : 47.5 }
+		},
+		{
+			"attributes" : {
+			"ST" : "RU",
+			"POP2000" : 11503501,
+			"AREANAME" : "Москва"
+			},
+			"geometry" : { "x" : 37.6185, "y" : 55.7526 }
+		},
+		{
+			"attributes" : {
+			"ST" : "LT",
+			"POP2000" : 17494,
+			"AREANAME" : "Паланга"
+			},
+			"geometry" : { "x" : 21.0774, "y" : 55.9152 }
+		},
+		{
+			"attributes" : {
+			"ST" : "KN",
+			"POP2000" : 0,
+			"AREANAME" : "Виктория"
+			},
+			"geometry" : { "x" : 32.9717, "y" : -1.1608 }
+		}
+	]
+}

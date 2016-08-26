@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PrintLayouts>
+  <PrintLayout ID="Basic" DisplayName="Основной" Description="Основная компоновка печати."/>
+  <PrintLayout ID="WithMapElements" DisplayName="С элементами карты" Description="Компоновка печати с элементами карты, подобная обзорной карте."/>
+</PrintLayouts>

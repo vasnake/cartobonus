@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="mwb02.AddIns.VExtraLayersForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="432" d:DesignWidth="582" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+		<Grid Height="432" HorizontalAlignment="Left" Name="grid1" VerticalAlignment="Top"
+				Width="582" >
+			<sdk:Label Height="34" HorizontalAlignment="Left" Margin="116,12,0,0" Name="label1" VerticalAlignment="Top"
+				Width="300" Content="Типы дополнительных слоев" FontSize="16" />
+		<ListBox Height="303" HorizontalAlignment="Left" Margin="26,52,0,0" Name="listBox1" VerticalAlignment="Top"
+				Width="527" SelectionChanged="onSelectionChanged" FontSize="14">
+			<ListBoxItem Content="WMS (http://en.wikipedia.org/wiki/Web_Map_Service)" FontSize="14" />
+		</ListBox>
+		<Button Content="OK" Height="32" HorizontalAlignment="Left" Margin="341,375,0,0" Name="button1"
+				VerticalAlignment="Top" Width="75" FontSize="14" Click="onClickOK" IsEnabled="False" />
+		<Button Content="Отмена" Height="32" HorizontalAlignment="Left" Margin="451,375,0,0" Name="button2"
+				VerticalAlignment="Top" Width="75" FontSize="14" Click="onClickCancel" />
+		</Grid>
+	</Grid>
+</UserControl>

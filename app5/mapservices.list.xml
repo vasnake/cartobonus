@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+# -*- mode: xml; coding: utf-8 -*-
+# (c) parilov@allgis.org
+-->
+
+<!--
+	Воронеж
+-->
+<Layers>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="AdmDelenie"
+		name="Административное деление"
+		topic="Административное деление"
+		preview="http://map.govvrn.ru/arcgis/rest/services/AdmDelenie/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7396661.12157791,5467506.67062604,7807030.69231705,5799691.70999612">
+		http://map.govvrn.ru/arcgis/rest/services/AdmDelenie/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Administr"
+		name="Административное деление"
+		topic="Административное деление"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Administr/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4209617.453801123,6419764.781997974,4819027.314396163,6809284.486708206">
+		http://map.govvrn.ru/arcgis/rest/services/Administr/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Eco2"
+		name="Экология"
+		topic="Экология"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Eco2/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4331100.020195994,6770432.433783137,4442885.643767236,6789406.271730813">
+		http://map.govvrn.ru/arcgis/rest/services/Eco2/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="eisomsu"
+		name="Административное деление"
+		topic="Административное деление"
+		preview="http://map.govvrn.ru/arcgis/rest/services/eisomsu/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7423648.897365,5477953.73178,7792360.056335,5789108.30122">
+		http://map.govvrn.ru/arcgis/rest/services/eisomsu/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="kazaki_00"
+		name="Казаки"
+		topic="Прочее"
+		preview="http://map.govvrn.ru/arcgis/rest/services/kazaki_00/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4149653.348595608,6392418.762805018,4837825.391606363,6770371.518710529">
+		http://map.govvrn.ru/arcgis/rest/services/kazaki_00/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Kazaki_03"
+		name="Казаки"
+		topic="Прочее"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Kazaki_03/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4187107.903879868,6416715.945253802,4887641.304946671,6791620.6950633">
+		http://map.govvrn.ru/arcgis/rest/services/Kazaki_03/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="melivodhoz"
+		name="ФГБУ Управление Воронежмелиоводхоз"
+		topic="Предприятия"
+		preview="http://map.govvrn.ru/arcgis/rest/services/melivodhoz/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4340940.09107377,6635879.645818014,4558163.44218714,6816325.840043744">
+		http://map.govvrn.ru/arcgis/rest/services/melivodhoz/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="MVD"
+		name="МВД"
+		topic="Порядок"
+		preview="http://map.govvrn.ru/arcgis/rest/services/MVD/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4334633.299159388,6731772.331810629,4374339.068696848,6748390.833852895">
+		http://map.govvrn.ru/arcgis/rest/services/MVD/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Transinf"
+		name="Транспорт"
+		topic="Инфраструктура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Transinf/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=37.781371125412484,49.40594867479504,42.828721882355744,52.10322952825206">
+		http://map.govvrn.ru/arcgis/rest/services/Transinf/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Transinfo"
+		name="Транспорт"
+		topic="Инфраструктура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Transinfo/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=35.58424060218367,46.982567577719124,48.745819888640995,55.395123410300094">
+		http://map.govvrn.ru/arcgis/rest/services/Transinfo/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="vols"
+		name="Поселения"
+		topic="Прочее"
+		preview="http://map.govvrn.ru/arcgis/rest/services/vols/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7513463.9673379855,5630755.260164527,7605933.482197016,5679029.174312355">
+		http://map.govvrn.ru/arcgis/rest/services/vols/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="VRN"
+		name="Воронежская область"
+		topic="Обзорное"
+		preview="http://map.govvrn.ru/arcgis/rest/services/VRN/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7367360.277920371,5516197.287053809,7798811.636823088,5770327.843314914">
+		http://map.govvrn.ru/arcgis/rest/services/VRN/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="VRN84"
+		name="Воронежская область"
+		topic="Обзорное"
+		preview="http://map.govvrn.ru/arcgis/rest/services/VRN84/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4420588.792456433,6628838.239399628,4431632.755269857,6636878.8118976215">
+		http://map.govvrn.ru/arcgis/rest/services/VRN84/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="VRN84_100"
+		name="Воронежская область"
+		topic="Обзорное"
+		preview="http://map.govvrn.ru/arcgis/rest/services/VRN84_100/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4448944.470615848,6632774.17876482,4464166.466701842,6641748.11207105">
+		http://map.govvrn.ru/arcgis/rest/services/VRN84_100/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="DAP/dap"
+		name="Сельскохозяйственные предприятия"
+		topic="Предприятия"
+		preview="http://map.govvrn.ru/arcgis/rest/services/DAP/dap/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7435372.73070145,5614186.40101992,7677523.45554221,5750122.11979371">
+		http://map.govvrn.ru/arcgis/rest/services/DAP/dap/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="DASP/MTP"
+		name="Административное деление"
+		topic="Административное деление"
+		preview="http://map.govvrn.ru/arcgis/rest/services/DASP/MTP/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7466545.985703888,5680549.973597099,7524001.881359047,5712803.886852209">
+		http://map.govvrn.ru/arcgis/rest/services/DASP/MTP/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="DK/OKN"
+		name="Охрана"
+		topic="Культура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/DK/OKN/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=39.202806599412966,51.66523902147295,39.20739349977859,51.66781396151723">
+		http://map.govvrn.ru/arcgis/rest/services/DK/OKN/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Ecology/eco"
+		name="Экология"
+		topic="Экология"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Ecology/eco/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4328771.15303826,6769164.01874631,4394414.40932477,6789801.56002139">
+		http://map.govvrn.ru/arcgis/rest/services/Ecology/eco/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Ecology/eco1"
+		name="Экология"
+		topic="Экология"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Ecology/eco1/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4328771.15303826,6769164.01874631,4394414.40932477,6789801.56002139">
+		http://map.govvrn.ru/arcgis/rest/services/Ecology/eco1/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="General/Agency"
+		name="Учреждения"
+		topic="Предприятия"
+		preview="http://map.govvrn.ru/arcgis/rest/services/General/Agency/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=40.53930868186088,50.94604654422578,40.856630590487576,51.20266339207173">
+		http://map.govvrn.ru/arcgis/rest/services/General/Agency/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="IOOJM/Fishing"
+		name="Клёвые места"
+		topic="Прочее"
+		preview="http://map.govvrn.ru/arcgis/rest/services/IOOJM/Fishing/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4305422.160424428,6723351.171684959,4365601.024894914,6743719.402736508">
+		http://map.govvrn.ru/arcgis/rest/services/IOOJM/Fishing/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/M_CH_S"
+		name="МЧС"
+		topic="Порядок"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/M_CH_S/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=39.5807441478989,49.89861410411653,41.65210316340905,51.061409205378695">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/M_CH_S/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/Preview"
+		name="Воронежская область"
+		topic="Обзорное"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/Preview/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7427385.99661716,5480075.91867756,7796030.32103554,5793967.37293817">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/Preview/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/Preview_"
+		name="Воронежская область"
+		topic="Обзорное"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/Preview_/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7427385.99661716,5480075.91867756,7796030.32103554,5793967.37293817">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/Preview_/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/vrnArcheologia"
+		name="Культура и туризм"
+		topic="Культура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/vrnArcheologia/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7548073.177122396,5601998.809552961,7570981.2984807165,5615582.819097037">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/vrnArcheologia/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/vrnPrirodnTer"
+		name="Природа"
+		topic="Экология"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/vrnPrirodnTer/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7543021.711231687,5640660.220784474,7601014.798788068,5675048.839673566">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/vrnPrirodnTer/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/vrnRekreacia"
+		name="Культура и туризм"
+		topic="Культура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/vrnRekreacia/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7564680.024594622,5655261.676018091,7579341.222263945,5663955.4421263">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/vrnRekreacia/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/vrnSovremennaia"
+		name="Обзорная карта"
+		topic="Обзорное"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/vrnSovremennaia/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7483464.24537976,5693311.34351327,7544503.74245875,5729506.41590341">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/vrnSovremennaia/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/vrnStroitelstvo"
+		name="Строительство"
+		topic="Инфраструктура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/vrnStroitelstvo/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7366466.851983722,5501130.556208271,7783163.152042985,5748222.250391659">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/vrnStroitelstvo/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/vrnTransEnergo"
+		name="Транспорт и энергетика"
+		topic="Инфраструктура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/vrnTransEnergo/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7399656.326870363,5509985.169458301,7816352.626929626,5757076.8636416895">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/vrnTransEnergo/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="Maps/vrnTurArhPotencial"
+		name="Культура и туризм"
+		topic="Культура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/Maps/vrnTurArhPotencial/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7389259.459792822,5521553.77577673,7805955.75985209,5768645.469960119">
+		http://map.govvrn.ru/arcgis/rest/services/Maps/vrnTurArhPotencial/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="poryadok/Kazak"
+		name="Казаки"
+		topic="Прочее"
+		preview="http://map.govvrn.ru/arcgis/rest/services/poryadok/Kazak/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4127386.0344361244,6426013.951349817,4827919.435502929,6800918.701159313">
+		http://map.govvrn.ru/arcgis/rest/services/poryadok/Kazak/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="poryadok/Kazaki_01"
+		name="Казаки"
+		topic="Прочее"
+		preview="http://map.govvrn.ru/arcgis/rest/services/poryadok/Kazaki_01/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4189269.3923411514,6361362.665752841,4752388.518579397,6881047.705122929">
+		http://map.govvrn.ru/arcgis/rest/services/poryadok/Kazaki_01/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="poryadok/Kazaki_03"
+		name="Казаки"
+		topic="Прочее"
+		preview="http://map.govvrn.ru/arcgis/rest/services/poryadok/Kazaki_03/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=4165216.2350965296,6322437.3066965155,4751798.658261369,6863775.889373686">
+		http://map.govvrn.ru/arcgis/rest/services/poryadok/Kazaki_03/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="UIT/administracii"
+		name="Администрации"
+		topic="Административное деление"
+		preview="http://map.govvrn.ru/arcgis/rest/services/UIT/administracii/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7613198.384900052,5697940.902546037,7662000.436459571,5724743.604091521">
+		http://map.govvrn.ru/arcgis/rest/services/UIT/administracii/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="UIT/Cam"
+		name="Видеокамеры"
+		topic="Прочее"
+		preview="http://map.govvrn.ru/arcgis/rest/services/UIT/Cam/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7503003.483019811,5723412.836739567,7520830.60518019,5737829.552921445">
+		http://map.govvrn.ru/arcgis/rest/services/UIT/Cam/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="UIT/DTV2"
+		name="Развитие цифрового телевидения"
+		topic="Инфраструктура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/UIT/DTV2/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7472407.223999894,5588441.361423801,7613750.045980147,5667786.728289976">
+		http://map.govvrn.ru/arcgis/rest/services/UIT/DTV2/MapServer
+	</Layer>
+	<Layer type="ArcGISDynamicMapServiceLayer"
+		id="UIT/Post"
+		name="Почтовые отделения"
+		topic="Инфраструктура"
+		preview="http://map.govvrn.ru/arcgis/rest/services/UIT/Post/MapServer/export?f=image&amp;format=png24&amp;size=200,150&amp;bbox=7571111.399133368,5709312.797490548,7610362.542653634,5731347.141639751">
+		http://map.govvrn.ru/arcgis/rest/services/UIT/Post/MapServer
+	</Layer>
+</Layers>

@@ -1,0 +1,5 @@
+# -*- mode: txt; coding: utf-8 -*-
+# (c) Valik mailto:vasnake@gmail.com
+
+ * Define use-cases and basic functionality
+ * Create chunks processor design

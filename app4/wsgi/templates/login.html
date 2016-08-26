@@ -1,0 +1,42 @@
+{% extends "common.layout.html" %}
+
+{% block sidemenu %}
+	<li><a href="/cartobonus/">Картобонус</a></li>
+	<li><a href="/cartobonus/help/">Справка</a></li>
+	<li class="active"><a href="/cartobonus.servlets/cabinet">Кабинет</a></li>
+{% endblock %}
+
+
+{% block mainblockspan9 %}
+	<h2>Форма регистрации</h2>
+
+	<p>
+	Чтобы получить доступ к персональным данным, следует зарегистрироваться. <br />
+	Если у вас еще нет логина и пароля, их можно
+	<a href="mailto:support_rn@allgis.org?subject=cartobonus" rel="contact">получить у нас</a>. <br />
+	Для ознакомления с системой можно использовать логин <em>guest</em> пароль <em>guest</em>.
+	</p>
+
+	<form class="form-horizontal" action="" method=post enctype="multipart/form-data">
+		<div class="control-group">
+			<label class="control-label" for="username">Логин</label>
+			<div class="controls">
+				<input type="text" name="username" value="guest" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="password">Пароль</label>
+			<div class="controls">
+				<input type="password" name="password" value="guest" />
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<label class="checkbox">
+					<input type="checkbox" name="remember" value="yes" /> Запомнить
+				</label>
+				<button type="submit" class="btn btn-primary">Регистрация</button>
+			</div>
+		</div>
+	</form>
+{% endblock %}

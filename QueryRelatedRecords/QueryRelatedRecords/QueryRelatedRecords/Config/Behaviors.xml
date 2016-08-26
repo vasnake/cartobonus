@@ -1,0 +1,9 @@
+﻿<Behaviors xmlns:esri="http://schemas.esri.com/arcgis/mapping/2009" 
+xmlns:QueryRelatedRecords="clr-namespace:QueryRelatedRecords.AddIns;assembly=QueryRelatedRecords.AddIns">
+  <Behavior IsEnabled="True" Title="Identify">
+    <Behavior.Class>
+      <esri:IdentifyBehavior />
+    </Behavior.Class>
+    <Behavior.ConfigData></Behavior.ConfigData>
+  </Behavior>
+</Behaviors>

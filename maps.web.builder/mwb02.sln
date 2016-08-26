@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mwb02.AddIns", "mwb02\mwb02.AddIns\mwb02.AddIns.csproj", "{FB1E33EE-27F9-49BF-919B-9E0036F857D3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D47E6045-91BB-4CD0-942F-FF015F10F7F2} = {D47E6045-91BB-4CD0-942F-FF015F10F7F2}
+		{005BBBA4-932F-4FD9-B436-969F16E7019C} = {005BBBA4-932F-4FD9-B436-969F16E7019C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatableWindow", "FloatableWindow\FloatableWindow.csproj", "{D47E6045-91BB-4CD0-942F-FF015F10F7F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESRI.ArcGIS.Client.Toolkit.Toolbar", "toolbar\ESRI.ArcGIS.Client.Toolkit.Toolbar.csproj", "{005BBBA4-932F-4FD9-B436-969F16E7019C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB1E33EE-27F9-49BF-919B-9E0036F857D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1E33EE-27F9-49BF-919B-9E0036F857D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1E33EE-27F9-49BF-919B-9E0036F857D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1E33EE-27F9-49BF-919B-9E0036F857D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D47E6045-91BB-4CD0-942F-FF015F10F7F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47E6045-91BB-4CD0-942F-FF015F10F7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47E6045-91BB-4CD0-942F-FF015F10F7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47E6045-91BB-4CD0-942F-FF015F10F7F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{005BBBA4-932F-4FD9-B436-969F16E7019C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{005BBBA4-932F-4FD9-B436-969F16E7019C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{005BBBA4-932F-4FD9-B436-969F16E7019C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{005BBBA4-932F-4FD9-B436-969F16E7019C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

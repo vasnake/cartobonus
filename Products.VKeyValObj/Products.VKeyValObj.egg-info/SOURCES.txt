@@ -1,0 +1,15 @@
+README.txt
+setup.py
+Products/__init__.py
+Products.VKeyValObj.egg-info/PKG-INFO
+Products.VKeyValObj.egg-info/SOURCES.txt
+Products.VKeyValObj.egg-info/dependency_links.txt
+Products.VKeyValObj.egg-info/entry_points.txt
+Products.VKeyValObj.egg-info/namespace_packages.txt
+Products.VKeyValObj.egg-info/not-zip-safe
+Products.VKeyValObj.egg-info/requires.txt
+Products.VKeyValObj.egg-info/top_level.txt
+Products/VKeyValObj/__init__.py
+Products/VKeyValObj/tests.py
+Products/VKeyValObj/vkvobject.py
+Products/VKeyValObj/zope2.py

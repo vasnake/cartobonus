@@ -1,0 +1,7 @@
+﻿<Behaviors xmlns:esri="http://schemas.esri.com/arcgis/mapping/2009">
+  <Behavior IsEnabled="True" Title="Identify">
+    <Behavior.Class>
+      <esri:IdentifyBehavior />
+    </Behavior.Class>
+  </Behavior>
+</Behaviors>

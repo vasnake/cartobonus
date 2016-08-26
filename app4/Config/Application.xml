@@ -1,0 +1,34 @@
+﻿<ViewerApplication LogoFilePath="Images/logo.png" LayoutFilePath="Config/Layouts/Accordion_cb.xaml">
+  <TitleText>Картобонус</TitleText>
+  <Version>3.0.0.9</Version>
+  <HelpLinks>
+    <HelpLink>
+      <Url>/cartobonus/help/</Url>
+      <DisplayText>Справка</DisplayText>
+    </HelpLink>
+    <HelpLink>
+      <Url>/cartobonus.servlets/cabinet</Url>
+      <DisplayText>Профиль</DisplayText>
+    </HelpLink>
+  </HelpLinks>
+  <Extensions>
+    <Extension Url="Extensions/mwb02.AddIns.xap" />
+    <Extension Url="Extensions/MeasureTool.AddIns.xap" />
+    <Extension Url="Extensions/PrintTool.AddIns.xap" />
+    <Extension Url="Extensions/SearchTool.AddIns.xap" />
+    <Extension Url="Extensions/Bookmarks.AddIns.xap" />
+    <Extension Url="Extensions/QueryRelatedRecords.AddIns.xap" />
+    <Extension Url="Extensions/Ice.AddIns.xap" />
+  </Extensions>
+  <ArcGISOnlineSharing>http://www.arcgis.com/sharing/</ArcGISOnlineSharing>
+  <ArcGISOnlineSharingSecure>https://www.arcgis.com/sharing/</ArcGISOnlineSharingSecure>
+  <ArcGISOnlineProxy></ArcGISOnlineProxy>
+  <GeometryService>http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer</GeometryService>
+  <Proxy></Proxy>
+  <BingMapsAppId></BingMapsAppId>
+  <WebMap>
+    <ID></ID>
+    <Title></Title>
+    <Linked></Linked>
+  </WebMap>
+</ViewerApplication>

@@ -1,0 +1,40 @@
+# http://httpd.apache.org/docs/2.2/mod/mod_speling.html
+CheckCaseOnly on
+CheckSpelling off
+
+# Silverlight
+AddType application/octet-stream .deploy
+AddType application/xaml+xml .xaml
+AddType application/x-ms-application .application
+AddType application/x-ms-xbap .xbap
+AddType application/x-silverlight-app .xap
+AddType application/x-ms-powerpoint .thmx
+
+AddDefaultCharset utf-8
+
+DirectoryIndex index.html index.htm
+
+RewriteEngine On
+RewriteBase /cartobonus/
+RewriteRule ^map.py$ map.html [R=301,L]
+
+# modpython
+#~ AddHandler mod_python .py
+#SetHandler mod_python
+#~ PythonHandler pycb
+#PythonHandler mod_python.publisher
+#~ PythonDebug On
+#PythonAutoReload on
+#PythonOption mod_python.session.session_type "FileSession"
+#~ PythonOption mod_python.session.session_type "DbmSession"
+#PythonOption mod_python.file_session.database_directory "c:/d/temp/sess"
+#PythonOption mod_python.dbm_session.database_directory "c:/d/temp/sess"
+#PythonOption mod_python.file_session.database_directory "/chroot/apache/www-ssl/tmp"
+#PythonOption mod_python.dbm_session.database_directory "/chroot/apache/www-ssl/tmp"
+
+#http://webpython.codepoint.net/mod_python_publisher_apache_configuration
+#Edit C:/d/Apache2.2\conf\httpd.conf,
+#find where other LoadModule lines are and add this:
+#LoadModule python_module modules/mod_python.so
+#2. Now test your installation using the instructions at this link:
+#http://www.modpython.org/live/current/doc-html/inst-testing.html

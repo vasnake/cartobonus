@@ -1,0 +1,156 @@
+﻿<UserControl x:Class="mwb02.AddIns.PrintForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+mc:Ignorable="d"
+d:DesignHeight="590" d:DesignWidth="720" 
+             >
+
+	<Grid x:Name="LayoutRoot" Background="White" Height="580" Width="710">
+
+
+		<Grid x:Name="grid1" Height="500" Width="700" 
+              HorizontalAlignment="Left" VerticalAlignment="Top" >
+
+			<!-- print controls -->
+			<!-- title text -->
+			<TextBox Height="34" HorizontalAlignment="Left" Margin="12,7,0,0"
+             Name="tbMapLabel" VerticalAlignment="Top" Width="366" FontSize="15"
+             Text="Заголовок карты" TextChanged="onMapLabelChanged" />
+
+			<!-- title font size -->
+			<TextBox Height="34" HorizontalAlignment="Left" Margin="390,7,0,0"
+             VerticalAlignment="Top" Width="40" FontSize="15"
+             Text="{Binding SelectedFontSize, Mode=TwoWay}" />
+			<sdk:Label Height="28" Margin="433,15,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="18" Content="pt"/>
+
+			<!-- Font Family Selection -->
+			<ComboBox ItemsSource="{Binding FontFamilies}" FontSize="13" Height="34"
+                      Margin="460,7,0,0" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top"
+                          SelectedItem="{Binding SelectedFontFamily, Mode=TwoWay}"
+                     ToolTipService.ToolTip="Font">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding}" FontFamily="{Binding}" />
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+
+
+			<!-- Comment textbox -->
+			<TextBox Name="tbDescrSrc" VerticalAlignment="Top" HorizontalAlignment="Left"
+			Margin="12,55,0,0" TextWrapping="Wrap" MinWidth="366" MinHeight="50" MaxHeight="60" MaxWidth="370"
+				Text="Комментарий к карте" FontSize="12" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" />
+			<!-- comment font size -->
+			<TextBox Height="34" HorizontalAlignment="Left" Margin="390,55,0,0"
+             VerticalAlignment="Top" Width="40" FontSize="15"
+             Text="{Binding SelectedDescrFontSize, Mode=TwoWay}" />
+			<sdk:Label Height="28" Margin="433,62,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="18" Content="pt"/>
+
+
+			<sdk:Label Content="Размер картины, Ширина х Высота, мм:"
+					   Height="28" HorizontalAlignment="Left" VerticalAlignment="Top" Width="248" Margin="15,120,0,0"/>
+
+			<!-- http://en.wikipedia.org/wiki/Paper_size#C_series -->
+			<HyperlinkButton Content="(стандартные размеры бумаги)"
+                 Height="23" HorizontalAlignment="Left"
+                 Margin="165,145,0,0" Name="hyperlinkButton1" VerticalAlignment="Top" Width="190" 
+                 NavigateUri="http://en.wikipedia.org/wiki/Paper_size#C_series" TargetName="_blank" />
+
+			<!-- paper width, mm -->
+			<TextBox Height="34" HorizontalAlignment="Left" Margin="17,137,0,0"
+             VerticalAlignment="Top" Width="50" FontSize="15"
+             Text="{Binding SelectedPaperX, Mode=TwoWay}" />
+			<sdk:Label Height="28" Margin="75,145,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="18" Content="X"/>
+			<!-- paper height, mm -->
+			<TextBox Height="34" HorizontalAlignment="Left" Margin="97,137,0,0"
+             VerticalAlignment="Top" Width="50" FontSize="15"
+             Text="{Binding SelectedPaperY, Mode=TwoWay}" />
+
+			<!-- Apply print layout -->
+			<Button Content="Применить" Height="34" HorizontalAlignment="Left" 
+        Margin="560,119,0,0" VerticalAlignment="Top" Width="100"
+        Click="onClickApplyButton"/>
+			
+			<!-- on\off legend -->
+<CheckBox Content="Легенда" Height="22" HorizontalAlignment="Left" Margin="500,55,0,0" Name="cbLegend"
+					VerticalAlignment="Top" IsChecked="True" />
+			
+			<!-- on\off comment -->
+			<CheckBox Content="Комментарий" Height="22" HorizontalAlignment="Left" Margin="500,85,0,0" Name="cbComment"
+					VerticalAlignment="Top" IsChecked="True" />
+
+			<!-- Print preview -->
+			<Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                    Margin="40,190,3,3">
+				<Viewbox Name="viewbox1" Height="300" Width="600"
+                  VerticalAlignment="Stretch" HorizontalAlignment="Left" Margin="3,3,3,3" Stretch="Uniform">
+
+					<!-- printableArea 700 px / 96 dpi * 24 mm = 17 cm; Width="750" Height="1000" -->
+					<Grid x:Name="printableArea" Width="{Binding SelectedWidthPx, Mode=TwoWay}"
+      Height="{Binding SelectedHeightPx, Mode=TwoWay}"
+      MaxHeight="Infinity" MaxWidth="Infinity" Visibility="Visible"
+								Margin="1,1,1,1">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="auto"></RowDefinition>
+							<RowDefinition Height="*"></RowDefinition>
+							<RowDefinition Height="auto"></RowDefinition>
+						</Grid.RowDefinitions>
+
+						<!-- map title -->
+						<sdk:Label Name="label1" Content="Заголовок карты" Height="auto" Grid.Row="0"
+			   HorizontalAlignment="Left" Margin="20,20,10,5" VerticalAlignment="Top" Width="auto" Background="White">
+						</sdk:Label>
+						
+						<!-- map -->
+							<esri:Map x:Name="Map" Grid.Row="1" MinHeight="100" MinWidth="100"
+												VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+BorderBrush="Green" BorderThickness="1" IsLogoVisible="False"
+WrapAround="True" Visibility="Visible"
+SnapToLevels="True" Margin="20,5,10,10"
+Background="White" Extent="-400000, 5230000, 840000, 6870000">
+								<esri:ArcGISTiledMapServiceLayer ID="Basemap"
+Url="http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>
+							</esri:Map>
+
+						<!-- legend, scale -->
+							<Grid HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
+	Margin="1,1,1,1" Grid.Row="1">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="auto"></ColumnDefinition>
+									<ColumnDefinition Width="*"></ColumnDefinition>
+								</Grid.ColumnDefinitions>
+
+									<!-- Legend -->
+									<esri:Legend Name="legend1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="0"
+	Margin="19,0,0,9" BorderThickness="0">
+									</esri:Legend>
+
+									<!-- Scale line-->
+									<esri:ScaleLine Name="scaleLine1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="1"
+	Margin="35,0,20,20" Background="#76FFFFFF" />
+							</Grid>
+
+						<!-- Comment textbox -->
+						<TextBox Name="tbDescription" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="2"
+			Margin="20,10,0,10" 
+			TextWrapping="Wrap" MinWidth="300" MinHeight="50" MaxHeight="3000" MaxWidth="900"
+				Text="Комментарий к карте"/>
+
+					</Grid>
+
+				</Viewbox>
+
+			</Border>
+			
+		</Grid>
+
+		<Button x:Name="button1" Content="Печатать..." Height="34" HorizontalAlignment="Right"
+                Margin="0,0,30,15" 
+                 VerticalAlignment="Bottom" Width="124"
+                Click="onClickPrint"/>
+	</Grid>
+</UserControl>

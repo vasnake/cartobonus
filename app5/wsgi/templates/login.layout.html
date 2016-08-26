@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="direction: ltr;" xmlns="http://www.w3.org/1999/xhtml" lang="ru-ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Регистрация - Картобонус</title>
+<meta content="ООО АЛГИС" name="author" />
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class=page>
+  <h1>Картобонус</h1>
+  <div class=metanav>
+  {% if current_user.is_authenticated() %}
+    Вы зарегистрированы как {{ current_user.name }} | <a href="{{ url_for('logout') }}">log out</a>
+  {% else %}
+    Вы не зарегистрированы | <a href="{{ url_for('login') }}">log in</a>
+  {% endif %}
+  </div>
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+
+  {% block body %}{% endblock %}
+
+</div>
+
+<p class="western" style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color rgb(0, 0, 0); border-width: medium medium 1px; padding: 0cm 0cm 0.07cm; margin-bottom: 0cm;">&nbsp;</p>
+<p class="western" style="margin-bottom: 0cm;"> </p>
+<div class="copyright"> © 2012 ALGIS LLC. С вопросами и предложениями обращайтесь по адресу
+<a href="mailto:support_rn@allgis.org?subject=cartobonus">support@allgis.org</a>
+</div>
+
+</body></html>

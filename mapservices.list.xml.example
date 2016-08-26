@@ -1,0 +1,34 @@
+<!--
+# -*- mode: xml; coding: utf-8 -*-
+-->
+<Layers>
+<!--
+примеры слоев разных типов и с разным набором параметров:
+-->
+	<Layer id="mxd" type="ArcGISDynamicMapServiceLayer "
+		name="Меридианы, параллели" topic="География">
+		http://rngis.algis.com/ArcGIS/rest/services/mesh/MapServer
+	</Layer>
+
+	<Layer id="mxd.lyr" type="FeatureLayer "
+		name="Подслой службы с сеткой" topic="География">
+		http://rngis.algis.com/ArcGIS/rest/services/mesh/MapServer/0
+	</Layer>
+
+	<Layer id="mxd.tiled" type="ArcGISTiledMapServiceLayer"
+		name="Сейсмоплотность" topic="Батиметрия">
+		http://rngis.algis.com/ArcGIS/rest/services/seismodenstiled/MapServer
+	</Layer>
+
+	<Layer id="2" type="ArcGISDynamicMapServiceLayer"
+		name="закрытый КНТЦ (прокси)" topic="test"
+		proxy="http://vdesk.algis.com/agsproxy/Proxy.ashx">
+		http://wrngis1.algis.com/ArcGIS/rest/services/closed/MapServer
+	</Layer>
+
+	<Layer id="1" type="ArcGISDynamicMapServiceLayer"
+		name="Балтийское море. Изобаты" topic="Батиметрия"
+		preview="preview/Балтийское море. Изобаты.png">
+		http://as2217.msk.rn.ru/ArcGIS/rest/services/havepreview/MapServer
+	</Layer>
+</Layers>

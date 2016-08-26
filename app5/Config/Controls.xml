@@ -1,0 +1,36 @@
+﻿<Controls>
+  <Control Name="EditorConfiguration">
+    <Control.ConfigData>
+      <EditorConfiguration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ESRI.ArcGIS.Client.Application.Controls">
+        <AddToSelectionTool>true</AddToSelectionTool>
+        <AutocompleteTool>true</AutocompleteTool>
+        <ClearSelectionTool>true</ClearSelectionTool>
+        <CutTool>true</CutTool>
+        <DeleteTool>true</DeleteTool>
+        <EditShapesTool>true</EditShapesTool>
+        <EditValuesTool>true</EditValuesTool>
+        <RemoveFromSelectionTool>true</RemoveFromSelectionTool>
+        <ReshapeTool>true</ReshapeTool>
+        <SelectTool>true</SelectTool>
+        <UnionTool>true</UnionTool>
+        <AlwaysDisplayDefaultTemplates>true</AlwaysDisplayDefaultTemplates>
+        <AutoSelect>true</AutoSelect>
+        <Continuous>true</Continuous>
+        <FreehandTool>true</FreehandTool>
+        <ShowAttributesOnAdd>true</ShowAttributesOnAdd>
+        <AutoSave>true</AutoSave>
+        <EditingShapesEnabled>true</EditingShapesEnabled>
+      </EditorConfiguration>
+    </Control.ConfigData>
+  </Control>
+  <Control Name="MapContents">
+    <Control.ConfigData>
+      <MapContentsConfiguration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ESRI.ArcGIS.Client.Application.Controls.MapContents">
+        <Mode>Contents</Mode>
+        <ContextMenuToolPanelName>LayerConfigurationContextMenuContainer</ContextMenuToolPanelName>
+        <AllowLayerSelection>true</AllowLayerSelection>
+        <ExpandLayersOnAdd>true</ExpandLayersOnAdd>
+      </MapContentsConfiguration>
+    </Control.ConfigData>
+  </Control>
+</Controls>

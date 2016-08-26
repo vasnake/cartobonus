@@ -1,0 +1,22 @@
+{
+	"displayFieldName" : "AREANAME",
+	"geometryType" : "esriGeometryPolyline",
+	"spatialReference" : {"wkid" : 4326},
+	"fieldAliases" : {
+		"ST" : "State Name",
+		"POP2000" : "Population",
+		"AREANAME" : "Местность"
+		},
+	"features" : [
+		{
+			"attributes" : {
+			"ST" : "Intl",
+			"POP2000" : "много",
+			"AREANAME" : "Москва-Паланга-оз.Виктория"
+			},
+			"geometry" : {
+				"paths" : [ [ [37.6185, 55.7526], [21.0774, 55.9152], [32.9717, -1.1608] ] ]
+			}
+		}
+	]
+}

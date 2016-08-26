@@ -1,0 +1,6 @@
+# -*- mode: txt; coding: utf-8 -*-
+# (c) Valik mailto:vasnake@gmail.com
+
+ * Unpack to %INSTANCE_HOME%\Products\vcufile\
+ * restart Zope
+ * use ZMI to add VCUFile

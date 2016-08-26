@@ -1,0 +1,77 @@
+﻿<fw:FloatableWindow x:Class="mwb02.AddIns.resizableIdentify"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:fw="clr-namespace:System.Windows.Controls;assembly=FloatableWindow"
+    xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+    xmlns:slData="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+    mc:Ignorable="d"
+    d:DesignHeight="400" d:DesignWidth="300"
+             HorizontalAlignment="Left" VerticalAlignment="Top"
+             Width="400" Height="300" MinWidth="100" MinHeight="100"
+             HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+    
+    <Grid x:Name="LayoutRoot" Background="White"
+          HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.Resources>
+            <ResourceDictionary>
+                <esri:SimpleMarkerSymbol x:Key="RedMarkerSymbol" Color="Red" Size="12" Style="Circle" />
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="/ESRI.ArcGIS.Client.Extensibility;component/Themes/Common.Theme.xaml" />
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Grid.Resources>
+
+        <Grid x:Name="IdentifyGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="DataDisplayTitleBottom"
+                       Text="Click to identify features" 
+                       Foreground="{StaticResource BackgroundTextColorBrush}" FontSize="10" 
+                       Grid.Row="0"                      
+                       HorizontalAlignment="Center" >
+            </TextBlock>
+            <Grid x:Name="IdentifyResultsPanel" HorizontalAlignment="Stretch" 
+                            VerticalAlignment="Stretch" Visibility="Visible" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <ComboBox x:Name="IdentifyComboBox" ItemsSource="{Binding}"
+                          DisplayMemberPath="Title" 
+                         Margin="5,1,5,5" Grid.Row="0">
+                </ComboBox>
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" 
+                              VerticalScrollBarVisibility="Auto"  
+                              HorizontalAlignment="Stretch"
+                              MinHeight="200"
+                              Grid.Row="1" BorderBrush="{StaticResource AccentColorBrush}"
+                              Padding="0">
+
+                    <slData:DataGrid x:Name="IdentifyDetailsDataGrid"
+                                     AutoGenerateColumns="False" 
+                                     HeadersVisibility="None"
+                                     Background="White" BorderThickness="0" 
+ItemsSource="{Binding ElementName=IdentifyComboBox, Path=SelectedItem.Data}"
+                                     HorizontalAlignment="Stretch" 
+                                     HorizontalContentAlignment="Stretch" SelectionChanged="onDataGridSelectionChanged">
+
+                        <slData:DataGrid.Columns>
+                            <slData:DataGridTextColumn Binding="{Binding Path=Key}"
+                                                       FontWeight="Bold"/>
+                            <slData:DataGridTextColumn Binding="{Binding Path=Value}"
+                                                       Width="Auto" />
+                        </slData:DataGrid.Columns>
+
+                    </slData:DataGrid>
+
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+
+    </Grid>
+
+</fw:FloatableWindow>
